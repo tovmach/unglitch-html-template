@@ -37,127 +37,154 @@
     <title>Webpage Title</title>
   </head>
   <body data-bs-spy="scroll" data-bs-target="#navbarExample">
-    <!-- Navigation -->
-    <nav
-      id="navbarExample"
-      class="navbar navbar-expand-lg fixed-top navbar-dark"
-      aria-label="Main navigation"
-    >
-      <div class="container">
-        <!-- Image Logo -->
-        <a class="navbar-brand logo-image" href="index.html"
-          ><img src="images/logo.svg" alt="alternative"
-        /></a>
+    <!-- Header -->
+    <header>
+      <!-- Navigation -->
+      <nav
+        id="navbarExample"
+        class="navbar navbar-expand-lg fixed-top navbar-dark"
+        aria-label="Main navigation"
+      >
+        <div class="container">
+          <!-- Image Logo -->
+          <a class="navbar-brand logo-image" href="index.html"
+            ><img src="images/logo.svg" alt="alternative"
+          /></a>
 
-        <!-- Text Logo - Use this if you don't have a graphic logo -->
-        <!-- <a class="navbar-brand logo-text" href="index.html">Leno</a> -->
+          <!-- Text Logo - Use this if you don't have a graphic logo -->
+          <!-- <a class="navbar-brand logo-text" href="index.html">Leno</a> -->
 
-        <button
-          class="navbar-toggler p-0 border-0"
-          type="button"
-          id="navbarSideCollapse"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
+          <button
+            class="navbar-toggler p-0 border-0"
+            type="button"
+            id="navbarSideCollapse"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasTrigger"
+            aria-controls="offcanvasTrigger"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
 
-        <div
-          class="navbar-collapse offcanvas-collapse"
-          id="navbarsExampleDefault"
-        >
-          <ul class="navbar-nav ms-auto navbar-nav-scroll">
-            <li class="nav-item">
-              <a class="nav-link" href="#header">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="article.html">Article</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="features.html">Features</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="pricing.html">Pricing</a>
-            </li>
-            <li class="nav-item dropdown">
-              <a
-                class="nav-link dropdown-toggle"
-                href="#"
-                id="dropdown01"
-                data-bs-toggle="dropdown"
-                aria-expanded="false"
-                >Drop</a
-              >
-              <ul class="dropdown-menu" aria-labelledby="dropdown01">
-                <li>
-                  <a class="dropdown-item" href="article.html"
-                    >Article Details</a
-                  >
-                </li>
-                <li><div class="dropdown-divider"></div></li>
-                <li>
-                  <a class="dropdown-item" href="terms.html"
-                    >Terms Conditions</a
-                  >
-                </li>
-                <li><div class="dropdown-divider"></div></li>
-                <li>
-                  <a class="dropdown-item" href="privacy.html"
-                    >Privacy Policy</a
-                  >
-                </li>
-              </ul>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-          <span class="nav-item social-icons">
-            <span class="fa-stack">
-              <a href="#your-link">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-facebook-f fa-stack-1x"></i>
-              </a>
+          <div
+            class="navbar-collapse d-none d-lg-block"
+            id="navbarsExampleDefault"
+          >
+            <ul class="navbar-nav navbar-nav-scroll ms-auto" id="navlist">
+              <li class="nav-item">
+                <a class="nav-link" href="#header">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="article.html">Article</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="features.html">Features</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="pricing.html">Pricing</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle"
+                  href="#"
+                  id="dropdown01"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                  >Drop</a
+                >
+                <ul class="dropdown-menu" aria-labelledby="dropdown01">
+                  <li>
+                    <a class="dropdown-item" href="article.html"
+                      >Article Details</a
+                    >
+                  </li>
+                  <li><div class="dropdown-divider"></div></li>
+                  <li>
+                    <a class="dropdown-item" href="terms.html"
+                      >Terms Conditions</a
+                    >
+                  </li>
+                  <li><div class="dropdown-divider"></div></li>
+                  <li>
+                    <a class="dropdown-item" href="privacy.html"
+                      >Privacy Policy</a
+                    >
+                  </li>
+                </ul>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+            <span class="nav-item social-icons">
+              <span class="fa-stack">
+                <a href="#your-link">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-facebook-f fa-stack-1x"></i>
+                </a>
+              </span>
+              <span class="fa-stack">
+                <a href="#your-link">
+                  <i class="fas fa-circle fa-stack-2x"></i>
+                  <i class="fab fa-twitter fa-stack-1x"></i>
+                </a>
+              </span>
             </span>
-            <span class="fa-stack">
-              <a href="#your-link">
-                <i class="fas fa-circle fa-stack-2x"></i>
-                <i class="fab fa-twitter fa-stack-1x"></i>
-              </a>
-            </span>
-          </span>
+          </div>
+          <!-- end of navbar-collapse -->
         </div>
-        <!-- end of navbar-collapse -->
+        <!-- end of container -->
+      </nav>
+      <!-- end of navbar -->
+      <!-- offcanvas mobile menu -->
+      <div
+        class="offcanvas offcanvas-start"
+        tabindex="-1"
+        id="offcanvasTrigger"
+        aria-labelledby="offcanvasTriggerLabel"
+      >
+        <div class="offcanvas-header pb-1">
+          <h5 class="offcanvas-title" id="offcanvasExampleLabel">Offcanvas</h5>
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="offcanvas"
+            aria-label="Close"
+          ></button>
+        </div>
+        <div class="offcanvas-body pt-0" id="offcanvasTriggerBody"></div>
       </div>
-      <!-- end of container -->
-    </nav>
-    <!-- end of navbar -->
-    <!-- end of navigation -->
-
-    <!-- Swiper -->
-    <div class="swiper mySwiper mt-5">
-      <div class="swiper-wrapper">
-        <div class="swiper-slide">Slide 1</div>
-        <div class="swiper-slide">Slide 2</div>
-        <div class="swiper-slide">Slide 3</div>
-        <div class="swiper-slide">Slide 4</div>
-        <div class="swiper-slide">Slide 5</div>
-        <div class="swiper-slide">Slide 6</div>
-        <div class="swiper-slide">Slide 7</div>
-        <div class="swiper-slide">Slide 8</div>
-        <div class="swiper-slide">Slide 9</div>
+      <!-- end of offcanvas mobile menu -->
+      <!-- end of navigation -->
+    </header>
+    <!-- end of header -->
+    <!-- Main content -->
+    <main>
+      <!-- Swiper -->
+      <div class="swiper mySwiper mt-5">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">Slide 1</div>
+          <div class="swiper-slide">Slide 2</div>
+          <div class="swiper-slide">Slide 3</div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-      <div class="swiper-pagination"></div>
-    </div>
-    <!-- End of Swiper -->
+      <!-- End of Swiper -->
 
-    <!-- Back To Top Button -->
-    <button onclick="topFunction()" id="myBtn">
-      top
-      <!-- <img src="images/up-arrow.png" alt="alternative" /> -->
-    </button>
-    <!-- end of back to top button -->
+      <!-- Back To Top Button -->
+      <button onclick="topFunction()" id="myBtn">
+        top
+        <!-- <img src="images/up-arrow.png" alt="alternative" /> -->
+      </button>
+      <!-- end of back to top button -->
+    </main>
+    <!-- end main content -->
+    <!-- Footer -->
+    <footer>
+      <div class="container">footer</div>
+    </footer>
+    <!-- end of Footer -->
     <!-- Scripts -->
     <!-- Bootstrap framework -->
     <script src="js/bootstrap.min.js"></script>

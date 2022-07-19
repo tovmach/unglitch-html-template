@@ -21,20 +21,20 @@ function scrollFunction() {
   }
 }
 
-// Navbar on mobile
-let elements = document.querySelectorAll(
-  '.navbar-nav .nav-link:not(.dropdown-toggle)'
-)
+// // Navbar on mobile
+// let elements = document.querySelectorAll(
+//   '.navbar-nav .nav-link:not(.dropdown-toggle)'
+// )
 
-for (let i = 0; i < elements.length; i++) {
-  elements[i].addEventListener('click', () => {
-    document.querySelector('.offcanvas-collapse').classList.toggle('open')
-  })
-}
+// for (let i = 0; i < elements.length; i++) {
+//   elements[i].addEventListener('click', () => {
+//     document.querySelector('.offcanvas-collapse').classList.toggle('open')
+//   })
+// }
 
-document.querySelector('.navbar-toggler').addEventListener('click', () => {
-  document.querySelector('.offcanvas-collapse').classList.toggle('open')
-})
+// document.querySelector('.navbar-toggler').addEventListener('click', () => {
+//   document.querySelector('.offcanvas-collapse').classList.toggle('open')
+// })
 
 // Hover on desktop
 function toggleDropdown(e) {
@@ -111,3 +111,9 @@ var swiper = new Swiper('.mySwiper', {
     prevEl: '.swiper-button-prev',
   },
 })
+
+// Clone navigation links to offcanvas component
+const nav = document.getElementById('navlist')
+const nav_nodes = nav.cloneNode(true)
+const offcanvas = document.getElementById('offcanvasTriggerBody')
+offcanvas.appendChild(nav_nodes)
