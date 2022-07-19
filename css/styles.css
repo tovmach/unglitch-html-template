@@ -35,9 +35,11 @@ Colors:
 /**************************/
 
 :root {
+  --text-color: #fff;
   --main-bg-color: #2b2c35;
-  --main-blue: #01ffff;
-  --main-pink: #ff00fe;
+  --main-bg-color-light: #363742;
+  --main-blue-color: #01ffff;
+  --main-pink-color: #ff00fe;
 }
 
 body {
@@ -45,28 +47,53 @@ body {
   height: 100vh;
   display: flex;
   flex-direction: column;
+  color: var(--text-color);
 }
 main {
   flex: 1 1 auto;
+}
+
+a {
+  color: var(--main-blue-color);
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--main-blue-color);
 }
 
 /**********************/
 /*     Navigation     */
 /**********************/
 
-/* offcanvas */
-.offcanvas.show a {
-  color: #2b2c35;
+/* offcanvas mobile menu */
+.offcanvas {
+  background-color: var(--main-bg-color);
+  color: var(--text-color);
 }
-
+.offcanvas.show a {
+  color: var(--text-color);
+}
 .offcanvas.offcanvas-start {
   width: 250px;
+}
+.offcanvas li {
+  border-bottom: 1px solid rgba(177, 177, 177, 0.18);
+}
+.offcanvas li:first-child {
+  border-top: 1px solid rgba(177, 177, 177, 0.18);
+}
+.offcanvas li:hover {
+  background-color: var(--main-bg-color-light);
+}
+.offcanvas a {
+  padding: 1rem 2rem 1rem 2rem;
 }
 
 /******************************/
 /*     Back To Top Button     */
 /******************************/
-#myBtn {
+#backToTopButton {
   position: fixed;
   z-index: 99;
   bottom: 20px;
@@ -78,18 +105,16 @@ main {
   border-radius: 50%;
   outline: none;
   background-color: var(--main-bg-color);
-  border: var(--main-blue) 2px solid;
-
+  border: var(--text-color) 2px solid;
   cursor: pointer;
 }
 
-#myBtn:hover {
-  background-color: var(--main-blue);
+#backToTopButton:hover {
+  background-color: var(--main-bg-color-light);
 }
 
-#myBtn img {
-  margin-bottom: 0.25rem;
-  width: 18px;
+#backToTopButton i {
+  color: var(--text-color);
 }
 
 /******************************/
@@ -138,5 +163,5 @@ main {
 /**********************/
 
 footer {
-  color: white;
+  padding: 1rem;
 }

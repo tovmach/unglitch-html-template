@@ -3,23 +3,23 @@
 /* Navigation */
 // Collapse the navbar by adding the top-nav-collapse class
 window.onscroll = function () {
-  scrollFunction()
+  //scrollFunction()
   scrollFunctionBTT() // back to top button
 }
 
-window.onload = function () {
-  scrollFunction()
-}
+// window.onload = function () {
+//   scrollFunction()
+// }
 
-function scrollFunction() {
-  if (document.documentElement.scrollTop > 30) {
-    document.getElementById('navbarExample').classList.add('top-nav-collapse')
-  } else if (document.documentElement.scrollTop < 30) {
-    document
-      .getElementById('navbarExample')
-      .classList.remove('top-nav-collapse')
-  }
-}
+// function scrollFunction() {
+//   if (document.documentElement.scrollTop > 30) {
+//     document.getElementById('navbarExample').classList.add('top-nav-collapse')
+//   } else if (document.documentElement.scrollTop < 30) {
+//     document
+//       .getElementById('navbarExample')
+//       .classList.remove('top-nav-collapse')
+//   }
+// }
 
 // // Navbar on mobile
 // let elements = document.querySelectorAll(
@@ -37,50 +37,52 @@ function scrollFunction() {
 // })
 
 // Hover on desktop
-function toggleDropdown(e) {
-  const _d = e.target.closest('.dropdown')
-  let _m = document.querySelector('.dropdown-menu', _d)
+// function toggleDropdown(e) {
+//   const _d = e.target.closest('.dropdown')
+//   let _m = document.querySelector('.dropdown-menu', _d)
 
-  setTimeout(
-    function () {
-      const shouldOpen = _d.matches(':hover')
-      _m.classList.toggle('show', shouldOpen)
-      _d.classList.toggle('show', shouldOpen)
+//   setTimeout(
+//     function () {
+//       const shouldOpen = _d.matches(':hover')
+//       _m.classList.toggle('show', shouldOpen)
+//       _d.classList.toggle('show', shouldOpen)
 
-      _d.setAttribute('aria-expanded', shouldOpen)
-    },
-    e.type === 'mouseleave' ? 300 : 0
-  )
-}
+//       _d.setAttribute('aria-expanded', shouldOpen)
+//     },
+//     e.type === 'mouseleave' ? 300 : 0
+//   )
+// }
 
-// On hover
-const dropdownCheck = document.querySelector('.dropdown')
+// // On hover
+// const dropdownCheck = document.querySelector('.dropdown')
 
-if (dropdownCheck !== null) {
-  document
-    .querySelector('.dropdown')
-    .addEventListener('mouseleave', toggleDropdown)
-  document
-    .querySelector('.dropdown')
-    .addEventListener('mouseover', toggleDropdown)
+// if (dropdownCheck !== null) {
+//   document
+//     .querySelector('.dropdown')
+//     .addEventListener('mouseleave', toggleDropdown)
+//   document
+//     .querySelector('.dropdown')
+//     .addEventListener('mouseover', toggleDropdown)
 
-  // On click
-  document.querySelector('.dropdown').addEventListener('click', (e) => {
-    const _d = e.target.closest('.dropdown')
-    let _m = document.querySelector('.dropdown-menu', _d)
-    if (_d.classList.contains('show')) {
-      _m.classList.remove('show')
-      _d.classList.remove('show')
-    } else {
-      _m.classList.add('show')
-      _d.classList.add('show')
-    }
-  })
-}
+//   // On click
+//   document.querySelector('.dropdown').addEventListener('click', (e) => {
+//     const _d = e.target.closest('.dropdown')
+//     let _m = document.querySelector('.dropdown-menu', _d)
+//     if (_d.classList.contains('show')) {
+//       _m.classList.remove('show')
+//       _d.classList.remove('show')
+//     } else {
+//       _m.classList.add('show')
+//       _d.classList.add('show')
+//     }
+//   })
+// }
 
-/* Back To Top Button */
+/******************************/
+/*     Back To Top Button     */
+/******************************/
 // Get the button
-myButton = document.getElementById('myBtn')
+myButton = document.getElementById('backToTopButton')
 
 // When the user scrolls down 20px from the top of the document, show the button
 function scrollFunctionBTT() {
@@ -97,7 +99,9 @@ function topFunction() {
   document.documentElement.scrollTop = 0 // for Chrome, Firefox, IE and Opera
 }
 
-// Initialize Swiper
+/**********************/
+/*       Swiper       */
+/**********************/
 var swiper = new Swiper('.mySwiper', {
   slidesPerView: 1,
 
@@ -112,6 +116,9 @@ var swiper = new Swiper('.mySwiper', {
   },
 })
 
+/**********************/
+/*     Navigation     */
+/**********************/
 // Clone navigation links to offcanvas component
 const nav = document.getElementById('navlist')
 const nav_nodes = nav.cloneNode(true)
