@@ -12,39 +12,39 @@ window.onload = function () {
 /******************************/
 /*        Navigation          */
 /******************************/
-// Collapse the navbar by adding the top-nav-on-scroll class
+const mainNavBar = document.getElementById('mainNavBar')
+
+// Collapse the navbar by adding the navbar-scrolled class
 function scrollFunction() {
   if (document.documentElement.scrollTop > 1) {
-    document.getElementById('mainNavBar').classList.add('top-nav-on-scroll')
+    mainNavBar.classList.add('navbar-scrolled')
   } else if (document.documentElement.scrollTop < 1) {
-    document.getElementById('mainNavBar').classList.remove('top-nav-on-scroll')
+    mainNavBar.classList.remove('navbar-scrolled')
   }
 }
 
 // Hide main nav on scroll down show on scroll up
 document.addEventListener('DOMContentLoaded', function () {
-  el_autohide = document.querySelector('.autohide')
-
   // add padding-top to body (if necessary)
-  navbar_height = document.querySelector('.navbar').offsetHeight
-  document.body.style.paddingTop = navbar_height + 'px'
+  const navbarHeight = mainNavBar.offsetHeight
+  document.body.style.paddingTop = navbarHeight + 'px'
 
-  if (el_autohide) {
-    let last_scroll_top = 0
+  if (mainNavBar) {
+    let lastScrollTop = 0
     window.addEventListener('scroll', function () {
-      let scroll_top = window.scrollY
-      /* Let 56px scroll before hiding the main nav */
-      if (document.documentElement.scrollTop > 56) {
-        if (scroll_top < last_scroll_top) {
-          /* add the scrolled-up class to main nav and removes scrolled-down */
-          el_autohide.classList.remove('scrolled-down')
-          el_autohide.classList.add('scrolled-up')
+      let scrollTop = window.scrollY
+      /* Let navbarHeight px scroll before hiding the main nav */
+      if (document.documentElement.scrollTop > navbarHeight) {
+        if (scrollTop < lastScrollTop) {
+          /* add the navbar-scrolled-up class to main nav and removes navbar-scrolled-down */
+          mainNavBar.classList.remove('navbar-scrolled-down')
+          mainNavBar.classList.add('navbar-scrolled-up')
         } else {
-          /* add the scrolled-down class to main nav and removes scrolled-up */
-          el_autohide.classList.remove('scrolled-up')
-          el_autohide.classList.add('scrolled-down')
+          /* add the navbar-scrolled-down class to main nav and removes navbar-scrolled-up */
+          mainNavBar.classList.remove('navbar-scrolled-up')
+          mainNavBar.classList.add('navbar-scrolled-down')
         }
-        last_scroll_top = scroll_top
+        lastScrollTop = scrollTop
       }
     })
   }
@@ -52,8 +52,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //Close offcanvas from mobile menu
 const bsOffcanvas = new bootstrap.Offcanvas('#offcanvasNavbar')
-const liList = document.querySelectorAll('#navlist')
-for (const li of liList) {
+const navUl = document.getElementById('navlist')
+const navLiList = navUl.children
+for (const li of navLiList) {
   li.addEventListener('click', () => {
     setTimeout(() => bsOffcanvas.hide(), 500)
   })
@@ -62,7 +63,7 @@ for (const li of liList) {
 /**********************/
 /*       Swiper       */
 /**********************/
-var swiper = new Swiper('.mySwiper', {
+var swiper = new Swiper('#testimonialSwiper', {
   slidesPerView: 1,
 
   loop: true,
@@ -85,9 +86,9 @@ myButton = document.getElementById('backToTopButton')
 // When the user scrolls down 20px from the top of the document, show the button
 function scrollFunctionBTT() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    myButton.classList.add('show')
+    myButton.classList.add('back-to-top-button__show')
   } else {
-    myButton.classList.remove('show')
+    myButton.classList.remove('back-to-top-button__show')
   }
 }
 
