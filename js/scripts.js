@@ -20,7 +20,8 @@ function scrollFunction() {
     document.getElementById('mainNavBar').classList.remove('top-nav-on-scroll')
   }
 }
-// Hide Nav on scroll down
+
+// Hide main nav on scroll down show on scroll up
 document.addEventListener('DOMContentLoaded', function () {
   el_autohide = document.querySelector('.autohide')
 
@@ -29,14 +30,17 @@ document.addEventListener('DOMContentLoaded', function () {
   document.body.style.paddingTop = navbar_height + 'px'
 
   if (el_autohide) {
-    var last_scroll_top = 0
+    let last_scroll_top = 0
     window.addEventListener('scroll', function () {
       let scroll_top = window.scrollY
+      /* Let 56px scroll before hiding the main nav */
       if (document.documentElement.scrollTop > 56) {
         if (scroll_top < last_scroll_top) {
+          /* add the scrolled-up class to main nav and removes scrolled-down */
           el_autohide.classList.remove('scrolled-down')
           el_autohide.classList.add('scrolled-up')
         } else {
+          /* add the scrolled-down class to main nav and removes scrolled-up */
           el_autohide.classList.remove('scrolled-up')
           el_autohide.classList.add('scrolled-down')
         }

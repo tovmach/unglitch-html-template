@@ -43,9 +43,10 @@ Colors:
 }
 html {
   /* Offset scroll anchor for fixed navbar */
-  /* scroll-padding-top: 56px; */
+  scroll-padding-top: 56px;
 }
 body {
+  position: relative;
   background-color: var(--main-bg-color);
   height: 100vh;
   display: flex;
