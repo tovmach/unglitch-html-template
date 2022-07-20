@@ -43,9 +43,33 @@ document.addEventListener('DOMContentLoaded', function () {
         last_scroll_top = scroll_top
       }
     })
-    // window.addEventListener
   }
-  // if
+})
+
+//Close offcanvas from mobile menu
+const bsOffcanvas = new bootstrap.Offcanvas('#offcanvasNavbar')
+const liList = document.querySelectorAll('#navlist')
+for (const li of liList) {
+  li.addEventListener('click', () => {
+    setTimeout(() => bsOffcanvas.hide(), 500)
+  })
+}
+
+/**********************/
+/*       Swiper       */
+/**********************/
+var swiper = new Swiper('.mySwiper', {
+  slidesPerView: 1,
+
+  loop: true,
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '.swiper-button-next',
+    prevEl: '.swiper-button-prev',
+  },
 })
 
 /******************************/
@@ -68,20 +92,3 @@ function topFunction() {
   document.body.scrollTop = 0 // for Safari
   document.documentElement.scrollTop = 0 // for Chrome, Firefox, IE and Opera
 }
-
-/**********************/
-/*       Swiper       */
-/**********************/
-var swiper = new Swiper('.mySwiper', {
-  slidesPerView: 1,
-
-  loop: true,
-  pagination: {
-    el: '.swiper-pagination',
-    clickable: true,
-  },
-  navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
-  },
-})
