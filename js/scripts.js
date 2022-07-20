@@ -12,14 +12,41 @@ window.onload = function () {
 /******************************/
 /*        Navigation          */
 /******************************/
-// Collapse the navbar by adding the top-nav-collapse class
+// Collapse the navbar by adding the top-nav-on-scroll class
 function scrollFunction() {
-  if (document.documentElement.scrollTop > 15) {
-    document.getElementById('mainNavBar').classList.add('top-nav-collapse')
-  } else if (document.documentElement.scrollTop < 15) {
-    document.getElementById('mainNavBar').classList.remove('top-nav-collapse')
+  if (document.documentElement.scrollTop > 1) {
+    document.getElementById('mainNavBar').classList.add('top-nav-on-scroll')
+  } else if (document.documentElement.scrollTop < 1) {
+    document.getElementById('mainNavBar').classList.remove('top-nav-on-scroll')
   }
 }
+// Hide Nav on scroll down
+document.addEventListener('DOMContentLoaded', function () {
+  el_autohide = document.querySelector('.autohide')
+
+  // add padding-top to body (if necessary)
+  navbar_height = document.querySelector('.navbar').offsetHeight
+  document.body.style.paddingTop = navbar_height + 'px'
+
+  if (el_autohide) {
+    var last_scroll_top = 0
+    window.addEventListener('scroll', function () {
+      let scroll_top = window.scrollY
+      if (document.documentElement.scrollTop > 56) {
+        if (scroll_top < last_scroll_top) {
+          el_autohide.classList.remove('scrolled-down')
+          el_autohide.classList.add('scrolled-up')
+        } else {
+          el_autohide.classList.remove('scrolled-up')
+          el_autohide.classList.add('scrolled-down')
+        }
+        last_scroll_top = scroll_top
+      }
+    })
+    // window.addEventListener
+  }
+  // if
+})
 
 /******************************/
 /*     Back To Top Button     */
@@ -30,9 +57,9 @@ myButton = document.getElementById('backToTopButton')
 // When the user scrolls down 20px from the top of the document, show the button
 function scrollFunctionBTT() {
   if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-    myButton.style.display = 'block'
+    myButton.classList.add('show')
   } else {
-    myButton.style.display = 'none'
+    myButton.classList.remove('show')
   }
 }
 

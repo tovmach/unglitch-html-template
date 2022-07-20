@@ -43,7 +43,7 @@ Colors:
 }
 html {
   /* Offset scroll anchor for fixed navbar */
-  scroll-padding-top: 56px;
+  /* scroll-padding-top: 56px; */
 }
 body {
   background-color: var(--main-bg-color);
@@ -53,7 +53,6 @@ body {
   color: var(--text-color);
 }
 main {
-  margin-top: 3.5rem;
   flex: 1 1 auto;
 }
 
@@ -75,18 +74,34 @@ a:hover {
   background-color: var(--main-bg-color-light);
   border-radius: 5px;
 }
-/* Main Nav after scrolling */
-.navbar.top-nav-collapse {
+/* Main Nav */
+.navbar {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
   background-color: var(--main-bg-color);
-  box-shadow: 0 2px 6px 0 rgba(0, 0, 0, 0.05);
+  transition: 0.2s ease-in-out;
+}
+
+/* Main Nav Scroll Active */
+.navbar.top-nav-on-scroll {
+  box-shadow: rgb(0 0 0 / 20%) 0px 2px 4px -1px,
+    rgb(0 0 0 / 14%) 0px 4px 5px 0px, rgb(0 0 0 / 12%) 0px 1px 10px 0px;
 }
 
 #mobileMenuButton:hover {
   background-color: var(--main-bg-color-light);
 }
-
+.scrolled-down {
+  transform: translateY(-100%);
+  transition: all 0.3s ease-in-out;
+}
+.scrolled-down.top-nav-on-scroll {
+  box-shadow: none;
+}
+.scrolled-up {
+  transform: none;
+  transition: all 0.3s ease-in-out;
+}
 @media (min-width: 991px) {
   #navlist {
     margin-left: auto;
@@ -98,6 +113,9 @@ a:hover {
   .offcanvas {
     background-color: var(--main-bg-color);
     color: var(--text-color);
+  }
+  .offcanvas.show {
+    transform: none;
   }
   .offcanvas.show a {
     color: var(--text-color);
@@ -123,11 +141,12 @@ a:hover {
 /*     Back To Top Button     */
 /******************************/
 #backToTopButton {
+  box-shadow: rgb(0 0 0 / 20%) 0px 3px 5px -1px,
+    rgb(0 0 0 / 14%) 0px 6px 10px 0px, rgb(0 0 0 / 12%) 0px 1px 18px 0px;
   position: fixed;
   z-index: 99;
   bottom: 20px;
   right: 20px;
-  display: none;
   width: 52px;
   height: 52px;
   border: none;
@@ -136,6 +155,11 @@ a:hover {
   background-color: var(--main-bg-color-light);
   /* border: var(--text-color) 2px solid; */
   cursor: pointer;
+  opacity: 0;
+  transition: 0.3s ease-in-out;
+}
+#backToTopButton.show {
+  opacity: 1;
 }
 
 #backToTopButton:hover {
