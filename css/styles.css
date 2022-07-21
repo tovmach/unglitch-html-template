@@ -173,5 +173,82 @@ a:hover {
 }
 
 /* ******************** */
+/*    Custom Cursor     */
+/* ******************** */
+@media (min-width: 992px) {
+  .mouse-cursor {
+    z-index: 1200;
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    transform: translateZ(0);
+    visibility: hidden;
+  }
+  .cursor-inner {
+    margin-left: -3px;
+    margin-top: -3px;
+    width: 6px;
+    height: 6px;
+    background-color: var(--main-blue-color);
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out, margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+  .cursor-outer {
+    margin-left: -15px;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ffffff;
+    box-sizing: border-box;
+    opacity: 0.5;
+    transition: all 0.08s ease-out;
+  }
+  .cursor-inner.cursor-hover {
+    margin-left: -40px;
+    margin-top: -40px;
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    opacity: 0.3;
+  }
+  .cursor-outer.cursor-hover {
+    opacity: 0;
+  }
+  .cursor {
+    position: fixed;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid rgb(255, 2, 2);
+    left: 0;
+    transform: translate(-50%, -50%);
+  }
+}
+/* ******************** */
+/*        Scrollbar        */
+/* ******************** */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--main-bg-color-light);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--main-blue-color);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-blue-color);
+}
+
+/* ******************** */
 /*        Footer        */
 /* ******************** *//*# sourceMappingURL=styles.css.map */

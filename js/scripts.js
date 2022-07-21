@@ -97,3 +97,34 @@ function topFunction() {
   document.body.scrollTop = 0 // for Safari
   document.documentElement.scrollTop = 0 // for Chrome, Firefox, IE and Opera
 }
+
+/******************************/
+/*       Custom Cursor        */
+/******************************/
+
+const cursorInner = document.querySelector('.cursor-inner')
+const cursorOuter = document.querySelector('.cursor-outer')
+const links = document.querySelectorAll('a, button, .cursor-pointer')
+
+document.addEventListener('mousemove', (e) => {
+  cursorInner.style.transform =
+    'translate(' + e.clientX + 'px, ' + e.clientY + 'px)'
+  cursorOuter.style.transform =
+    'translate(' + e.clientX + 'px, ' + e.clientY + 'px)'
+  cursorInner.style.visibility = 'visible'
+
+  cursorOuter.style.visibility = 'visible'
+})
+
+for (const link of links) {
+  link.addEventListener('mouseenter', () => {
+    cursorInner.classList.add('cursor-hover')
+    cursorOuter.classList.add('cursor-hover')
+  })
+}
+for (const link of links) {
+  link.addEventListener('mouseleave', () => {
+    cursorInner.classList.remove('cursor-hover')
+    cursorOuter.classList.remove('cursor-hover')
+  })
+}
