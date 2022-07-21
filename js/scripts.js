@@ -104,7 +104,9 @@ function topFunction() {
 
 const cursorInner = document.querySelector('.cursor-inner')
 const cursorOuter = document.querySelector('.cursor-outer')
-const links = document.querySelectorAll('a, button, .cursor-pointer')
+const links = document.querySelectorAll(
+  'a, button, .js-link, input[type="button"], input[type="submit"]'
+)
 
 document.addEventListener('mousemove', (e) => {
   cursorInner.style.transform =
@@ -116,14 +118,29 @@ document.addEventListener('mousemove', (e) => {
   cursorOuter.style.visibility = 'visible'
 })
 
+document.addEventListener('mousedown', () => {
+  cursorInner.classList.add('cursor-click')
+  cursorOuter.classList.add('cursor-click')
+})
+document.addEventListener('mouseup', () => {
+  cursorInner.classList.remove('cursor-click')
+  cursorOuter.classList.remove('cursor-click')
+})
+document.addEventListener('mouseenter', () => {
+  cursorInner.classList.remove('cursor-hidden')
+  cursorOuter.classList.remove('cursor-hidden')
+})
+document.addEventListener('mouseleave', () => {
+  cursorInner.classList.add('cursor-hidden')
+  cursorOuter.classList.add('cursor-hidden')
+})
+
 for (const link of links) {
-  link.addEventListener('mouseenter', () => {
+  link.addEventListener('mouseover', () => {
     cursorInner.classList.add('cursor-hover')
     cursorOuter.classList.add('cursor-hover')
   })
-}
-for (const link of links) {
-  link.addEventListener('mouseleave', () => {
+  link.addEventListener('mouseout', () => {
     cursorInner.classList.remove('cursor-hover')
     cursorOuter.classList.remove('cursor-hover')
   })

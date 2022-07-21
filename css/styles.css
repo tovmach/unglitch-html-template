@@ -200,7 +200,6 @@ a:hover {
     width: 30px;
     height: 30px;
     border: 2px solid #ffffff;
-    box-sizing: border-box;
     opacity: 0.5;
     transition: all 0.08s ease-out;
   }
@@ -215,14 +214,22 @@ a:hover {
   .cursor-outer.cursor-hover {
     opacity: 0;
   }
-  .cursor {
-    position: fixed;
+  .cursor-inner.cursor-hover.cursor-click {
+    margin-left: -8px;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+  }
+  .cursor-outer.cursor-click {
+    margin-left: -20px;
+    margin-top: -20px;
     width: 40px;
     height: 40px;
-    border-radius: 50%;
-    border: 2px solid rgb(255, 2, 2);
-    left: 0;
-    transform: translate(-50%, -50%);
+    border: 2px solid #ffffff;
+  }
+  .cursor-hidden {
+    opacity: 0;
   }
 }
 /* ******************** */
