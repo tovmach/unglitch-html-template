@@ -21,6 +21,16 @@ Table Of Contents:
 - Extra Pages
 - Media Queries
 ****************************************** */
+/* ************************ */
+/*          Mixins          */
+/* ************************ */
+@use 'sass:math';
+
+//REM
+@function rem($px) {
+  $result: math.div($px, 16) + rem;
+  @return $result;
+}
 
 /* ************************ */
 /*          Colors          */
@@ -28,6 +38,7 @@ Table Of Contents:
 
 :root {
   --text-color: #fff;
+  --text-gray: #55565d;
   --main-bg-color: #2b2c35;
   --main-bg-color-light: #363742;
   --main-blue-color: #01ffff;
@@ -126,6 +137,116 @@ a:hover {
   .navbar-scrolled-down .offcanvas-backdrop {
     opacity: 0;
   }
+}
+/* **************************** */
+/*             Hero             */
+/* **************************** */
+// .circular-text {
+//   font-size: 12px;
+//   position: absolute;
+// }
+
+.left-hero {
+  height: rem(500);
+  position: relative;
+  &__title {
+  }
+  &__text {
+    text-align: center;
+  }
+  &__icon {
+    font-size: rem(40);
+    text-align: center;
+    position: relative;
+  }
+  &__circular-text {
+    left: 50%;
+    // margin-left: -50px;
+    top: 50%;
+    margin-top: -50px;
+    font-size: 12px;
+    position: absolute;
+  }
+  &__background-letter {
+    text-align: center;
+    left: 0;
+    right: 0;
+    top: rem(220);
+    transform: translateY(-50%);
+    opacity: 0.2;
+    position: absolute;
+    z-index: -1;
+    font-size: rem(600);
+    line-height: 1;
+    &:before,
+    &:after {
+      content: attr(data-glitch);
+      position: absolute;
+      left: 0;
+      right: 0;
+      margin: auto;
+    }
+    &:after {
+      color: #01ffff;
+      z-index: -1;
+      left: 10px;
+      top: 5px;
+    }
+    &:before {
+      color: #ff00fe;
+      z-index: -2;
+      left: -10px;
+      top: -5px;
+    }
+  }
+}
+
+.right-hero {
+  height: rem(500);
+  position: relative;
+  &__text {
+    position: absolute;
+    z-index: 1;
+    font-size: rem(35);
+    bottom: 65px;
+    right: 110px;
+  }
+  &__person {
+    position: absolute;
+    z-index: -1;
+    left: 0;
+    right: 0;
+    margin: auto;
+    width: rem(194);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+  &__wings {
+    position: absolute;
+    z-index: -2;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 35%;
+    transform: translateY(-50%);
+  }
+  &__triangle {
+    position: absolute;
+    z-index: -3;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+
+/* **************************** */
+/*      About       */
+/* **************************** */
+.about {
+  display: flex;
+  flex-direction: column;
 }
 
 /* **************************** */
@@ -259,7 +380,7 @@ a:hover {
   }
 }
 /* ******************** */
-/*        Scrollbar        */
+/*        Scrollbar     */
 /* ******************** */
 /* width */
 ::-webkit-scrollbar {
@@ -274,7 +395,7 @@ a:hover {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--main-blue-color);
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 /* Handle on hover */
@@ -283,5 +404,66 @@ a:hover {
 }
 
 /* ******************** */
-/*        Footer        */
+/*        Glitch        */
 /* ******************** */
+
+.glitch-1 {
+  position: relative;
+  &:before,
+  &:after {
+    content: attr(data-glitch);
+    position: absolute;
+  }
+  &:after {
+    color: #01ffff;
+    z-index: -1;
+    left: 2px;
+  }
+  &:before {
+    color: #ff00fe;
+    z-index: -2;
+    left: -2px;
+  }
+}
+.glitch-2 {
+  position: relative;
+  &:before,
+  &:after {
+    content: attr(data-glitch);
+    position: absolute;
+  }
+  &:after {
+    color: #01ffff;
+    z-index: -1;
+    left: 3px;
+  }
+  &:before {
+    color: #ff00fe;
+    z-index: -2;
+    left: -3px;
+  }
+}
+
+.title-glitch {
+  position: relative;
+  &__title {
+    text-align: center;
+    margin: auto;
+    font-size: rem(40);
+  }
+  &__text {
+    text-align: center;
+    z-index: -1;
+    margin: auto;
+    position: absolute;
+
+    top: 0;
+    font-size: rem(50);
+    color: var(--text-gray);
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}

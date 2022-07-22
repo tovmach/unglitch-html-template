@@ -145,3 +145,21 @@ for (const link of links) {
     cursorOuter.classList.remove('cursor-hover')
   })
 }
+
+/******************************/
+/*           Glitch           */
+/******************************/
+
+// const glitchList = document.querySelectorAll('[class*="glitch"]')
+
+// for (const glitch of glitchList) {
+//   glitch.dataset.glitch = glitch.textContent
+// }
+
+/******************************/
+/*       Circular Text        */
+/******************************/
+const list = document.querySelectorAll('.circular-text')
+for (const item of list) {
+  new CircleType(item)
+}

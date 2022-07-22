@@ -21,10 +21,14 @@ Table Of Contents:
 - Media Queries
 ****************************************** */
 /* ************************ */
+/*          Mixins          */
+/* ************************ */
+/* ************************ */
 /*          Colors          */
 /* ************************ */
 :root {
   --text-color: #fff;
+  --text-gray: #55565d;
   --main-bg-color: #2b2c35;
   --main-bg-color-light: #363742;
   --main-blue-color: #01ffff;
@@ -122,6 +126,108 @@ a:hover {
     opacity: 0;
   }
 }
+/* **************************** */
+/*             Hero             */
+/* **************************** */
+.left-hero {
+  height: 31.25rem;
+  position: relative;
+}
+.left-hero__text {
+  text-align: center;
+}
+.left-hero__icon {
+  font-size: 2.5rem;
+  text-align: center;
+  position: relative;
+}
+.left-hero__circular-text {
+  left: 50%;
+  top: 50%;
+  margin-top: -50px;
+  font-size: 12px;
+  position: absolute;
+}
+.left-hero__background-letter {
+  text-align: center;
+  left: 0;
+  right: 0;
+  top: 13.75rem;
+  transform: translateY(-50%);
+  opacity: 0.2;
+  position: absolute;
+  z-index: -1;
+  font-size: 37.5rem;
+  line-height: 1;
+}
+.left-hero__background-letter:before, .left-hero__background-letter:after {
+  content: attr(data-glitch);
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+.left-hero__background-letter:after {
+  color: #01ffff;
+  z-index: -1;
+  left: 10px;
+  top: 5px;
+}
+.left-hero__background-letter:before {
+  color: #ff00fe;
+  z-index: -2;
+  left: -10px;
+  top: -5px;
+}
+
+.right-hero {
+  height: 31.25rem;
+  position: relative;
+}
+.right-hero__text {
+  position: absolute;
+  z-index: 1;
+  font-size: 2.1875rem;
+  bottom: 65px;
+  right: 110px;
+}
+.right-hero__person {
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 12.125rem;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.right-hero__wings {
+  position: absolute;
+  z-index: -2;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 35%;
+  transform: translateY(-50%);
+}
+.right-hero__triangle {
+  position: absolute;
+  z-index: -3;
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+/* **************************** */
+/*      About       */
+/* **************************** */
+.about {
+  display: flex;
+  flex-direction: column;
+}
+
 /* **************************** */
 /*      Back To Top Button      */
 /* **************************** */
@@ -233,7 +339,7 @@ a:hover {
   }
 }
 /* ******************** */
-/*        Scrollbar        */
+/*        Scrollbar     */
 /* ******************** */
 /* width */
 ::-webkit-scrollbar {
@@ -248,7 +354,7 @@ a:hover {
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: var(--main-blue-color);
-  border-radius: 5px;
+  border-radius: 2px;
 }
 
 /* Handle on hover */
@@ -257,5 +363,63 @@ a:hover {
 }
 
 /* ******************** */
-/*        Footer        */
-/* ******************** *//*# sourceMappingURL=styles.css.map */
+/*        Glitch        */
+/* ******************** */
+.glitch-1 {
+  position: relative;
+}
+.glitch-1:before, .glitch-1:after {
+  content: attr(data-glitch);
+  position: absolute;
+}
+.glitch-1:after {
+  color: #01ffff;
+  z-index: -1;
+  left: 2px;
+}
+.glitch-1:before {
+  color: #ff00fe;
+  z-index: -2;
+  left: -2px;
+}
+
+.glitch-2 {
+  position: relative;
+}
+.glitch-2:before, .glitch-2:after {
+  content: attr(data-glitch);
+  position: absolute;
+}
+.glitch-2:after {
+  color: #01ffff;
+  z-index: -1;
+  left: 3px;
+}
+.glitch-2:before {
+  color: #ff00fe;
+  z-index: -2;
+  left: -3px;
+}
+
+.title-glitch {
+  position: relative;
+}
+.title-glitch__title {
+  text-align: center;
+  margin: auto;
+  font-size: 2.5rem;
+}
+.title-glitch__text {
+  text-align: center;
+  z-index: -1;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  font-size: 3.125rem;
+  color: var(--text-gray);
+  left: 0;
+  right: 0;
+  margin: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}/*# sourceMappingURL=styles.css.map */
