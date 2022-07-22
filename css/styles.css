@@ -224,8 +224,27 @@ a:hover {
 /*      About       */
 /* **************************** */
 .about {
+  height: 31.25rem;
   display: flex;
   flex-direction: column;
+  position: relative;
+}
+.about__text {
+  margin: auto;
+  margin-top: 1.25rem;
+  margin-bottom: 1.875rem;
+  width: 80%;
+  text-align: center;
+}
+.about__icons-list {
+  display: flex;
+  justify-content: center;
+  font-size: 1.875rem;
+}
+.about__icon {
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  font-size: 1.875rem;
 }
 
 /* **************************** */
@@ -403,23 +422,16 @@ a:hover {
 
 .title-glitch {
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .title-glitch__title {
-  text-align: center;
-  margin: auto;
   font-size: 2.5rem;
 }
 .title-glitch__text {
-  text-align: center;
   z-index: -1;
-  margin: auto;
   position: absolute;
-  top: 0;
   font-size: 3.125rem;
   color: var(--text-gray);
-  left: 0;
-  right: 0;
-  margin: auto;
-  top: 50%;
-  transform: translateY(-50%);
 }/*# sourceMappingURL=styles.css.map */
