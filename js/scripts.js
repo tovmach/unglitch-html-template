@@ -172,14 +172,15 @@ for (const item of list) {
 // for (const glitch of glitchList) {
 //   glitch.dataset.glitch = glitch.textContent
 // }
+
+//js library Glitched Writer
 const left__hero__title = document.querySelector('.left-hero__title')
-// use create method to create new instance.
+const text = left__hero__title.textContent
+left__hero__title.textContent = 'X'
 
 const writer = GlitchedWriter.create(left__hero__title, {
   maxGhosts: 0.1,
   ghostChance: 0.1,
 })
-const text = left__hero__title.dataset.textToGlitch
-console.log(text)
 
 writer.write(text)
