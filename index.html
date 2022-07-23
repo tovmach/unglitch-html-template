@@ -126,38 +126,42 @@
         <div class="container">
           <div class="row">
             <div class="col-12 col-md-6 hero__left left-hero">
-              <div class="left-hero__background-letter" data-glitch="M">M</div>
+              <div class="left-hero__background-letter" data-glitch="X">X</div>
 
-              <h1 class="glitch-2 left-hero__title">Michael Smith</h1>
+              <h1
+                class="left-hero__title"
+                id="left-hero__title"
+                data-text-to-glitch="Xavyer Black"
+              ></h1>
               <p class="left-hero__text">
                 Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-                Distinctio illum aut reiciendis quod earum, unde hic impedit
-                exercitationem.
+                Distinctio illum aut reiciendis distinctio illum aut reiciendis
+                quod earum, unde hic impedit exercitationem.
               </p>
-              <div class="row">
-                <div class="col-6 col-sm-3 left-hero__icon">
-                  <div class="left-hero__circular-text circular-text">
+              <div class="left-hero__icons-list">
+                <div class="left-hero__icon-container">
+                  <div class="left-hero__icon-circular-text circular-text">
                     Lorem ipsum dolor sit amet consectetur
                   </div>
-                  <i class="fa-brands fa-figma"></i>
+                  <i class="left-hero__icon fa-brands fa-figma"></i>
                 </div>
-                <div class="col-6 col-sm-3 left-hero__icon">
-                  <div class="left-hero__circular-text circular-text">
+                <div class="left-hero__icon-container">
+                  <div class="left-hero__icon-circular-text circular-text">
                     Lorem ipsum dolor sit amet consectetur
                   </div>
-                  <i class="fa-brands fa-figma"></i>
+                  <i class="left-hero__icon fa-brands fa-figma"></i>
                 </div>
-                <div class="col-6 col-sm-3 left-hero__icon">
-                  <div class="left-hero__circular-text circular-text">
+                <div class="left-hero__icon-container">
+                  <div class="left-hero__icon-circular-text circular-text">
                     Lorem ipsum dolor sit amet consectetur
                   </div>
-                  <i class="fa-brands fa-figma"></i>
+                  <i class="left-hero__icon fa-brands fa-figma"></i>
                 </div>
-                <div class="col-6 col-sm-3 left-hero__icon">
-                  <div class="left-hero__circular-text circular-text">
+                <div class="left-hero__icon-container">
+                  <div class="left-hero__icon-circular-text circular-text">
                     Lorem ipsum dolor sit amet consectetur
                   </div>
-                  <i class="fa-brands fa-figma"></i>
+                  <i class="left-hero__icon fa-brands fa-figma"></i>
                 </div>
               </div>
             </div>
@@ -165,7 +169,7 @@
               <div class="right-hero__text">編碼的力量</div>
               <img
                 class="right-hero__person"
-                src="images/man.png"
+                src="images/man-2.png"
                 alt="person"
               />
               <img
@@ -183,13 +187,13 @@
         </div>
       </section>
       <!-- ************* -->
-      <!--  Hero Section -->
+      <!--  About Section -->
       <!-- ************* -->
       <section class="about">
         <div class="container">
-          <div class="about__title title-glitch">
-            <div class="title-glitch__title">About</div>
-            <div class="title-glitch__text">空に505</div>
+          <div class="about__title section-title-glitch">
+            <h2 class="section-title-glitch__title">About</h2>
+            <div class="section-title-glitch__text">₮ⱧłɆ₲ł₦₦ł₦₲</div>
           </div>
 
           <p class="about__text">
@@ -202,10 +206,16 @@
             expedita magni dolor ratione.
           </p>
           <div class="about__icons-list">
-            <div class="about__icon"><i class="fa-brands fa-facebook-square"></i></i></i></div>
-            <div class="about__icon"><i class="fa-brands fa-instagram-square"></i></i></div>
-            <div class="about__icon"><i class="fa-brands fa-linkedin"></i></i></div>
-            <div class="about__icon"><i class="fa-brands fa-twitter-square"></i></div>
+            <a class="about__icon">
+              <i class="fa-brands fa-facebook-f"></i>
+            </a>
+            <a class="about__icon"><i class="fa-brands fa-twitter"></i></a>
+            <a class="about__icon">
+              <i class="fa-brands fa-linkedin-in"></i>
+            </a>
+            <a class="about__icon">
+              <i class="fa-brands fa-github-alt"></i>
+            </a>
           </div>
         </div>
         <!-- <img class="about__img" src="images/bat.svg" alt="bat" /> -->
@@ -213,14 +223,42 @@
       <!-- ******************* -->
       <!-- Testimonial Section -->
       <!-- ******************* -->
-      <section>
+      <section class="mt-5">
+        <!-- Section Title -->
         <div class="container">
+          <div class="about__title section-title-glitch">
+            <h2 class="section-title-glitch__title">Testimonial</h2>
+            <div class="section-title-glitch__text">₮ⱧłɆ₲ł₦₦ł₦₲</div>
+          </div>
           <!-- Swiper -->
-          <div class="swiper mt-5" id="testimonialSwiper">
+          <div class="swiper" id="testimonialSwiper">
             <div class="swiper-wrapper">
-              <div class="swiper-slide">Slide 1</div>
-              <div class="swiper-slide">Slide 2</div>
-              <div class="swiper-slide">Slide 3</div>
+              <div class="swiper-slide">
+                <img
+                  class="swiper-slide__img"
+                  src="./images/man-profile.jpg"
+                  alt="man"
+                />
+                <div class="swiper-slide__text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Animi fugit corporis quae hic nostrum praesentium eaque. Iste
+                  ipsam numquam nobis recusandae nihil, aut veritatis cum, illo
+                  ratione exercitationem unde aspernatur!
+                </div>
+              </div>
+              <div class="swiper-slide">
+                <img
+                  class="swiper-slide__img"
+                  src="./images/girl-profile.jpg"
+                  alt="man"
+                />
+                <div class="swiper-slide__text">
+                  Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+                  Animi fugit corporis quae hic nostrum praesentium eaque. Iste
+                  ipsam numquam nobis recusandae nihil, aut veritatis cum, illo
+                  ratione exercitationem unde aspernatur!
+                </div>
+              </div>
             </div>
             <div class="swiper-button-next"></div>
             <div class="swiper-button-prev"></div>
@@ -253,6 +291,7 @@
     <!-- ****** -->
     <!-- Footer -->
     <!-- ****** -->
+
     <footer class="footer">
       <div class="container">
         <div class="p-3">
@@ -268,6 +307,8 @@
     <!-- ******* -->
     <!-- Scripts -->
     <!-- ******* -->
+    <!-- Glitch cange later -->
+    <script src="https://cdn.jsdelivr.net/npm/glitched-writer/lib/index.min.js"></script>
     <!-- Bootstrap framework -->
     <script src="js/bootstrap.min.js"></script>
     <!-- Swiper -->

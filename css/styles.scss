@@ -22,7 +22,7 @@ Table Of Contents:
 - Media Queries
 ****************************************** */
 /* ************************ */
-/*          Mixins          */
+/*         Function         */
 /* ************************ */
 @use 'sass:math';
 
@@ -33,44 +33,69 @@ Table Of Contents:
 }
 
 /* ************************ */
-/*          Colors          */
+/*          Variables          */
 /* ************************ */
 
-:root {
-  --text-color: #fff;
-  --text-gray: #55565d;
-  --main-bg-color: #2b2c35;
-  --main-bg-color-light: #363742;
-  --main-blue-color: #01ffff;
-  --main-pink-color: #ff00fe;
-}
+// colors
+$text-color: #fff;
+$text-gray: #55565d;
+$main-bg-color: #2b2c35;
+$main-bg-color-light: #363742;
+$main-blue-color: #01ffff;
+$main-pink-color: #ff00fe;
+
+// breakpoints
+$sm-576px: 576px;
+$md-768px: 768px;
+$lg-992px: 992px;
+$xl-1200px: 1200px;
+$xxl-1400px: 1400px;
 
 /* ************************ */
 /*      General Styles      */
 /* ************************ */
 
+// fonts
+@font-face {
+  font-family: Invasible;
+  src: url('../fonts/invasible-invasible-regular-400.ttf') format('opentype');
+}
+
+// tags
 html {
   /* Offset scroll anchor for fixed navbar */
   scroll-padding-top: 56px;
 }
 body {
-  background-color: var(--main-bg-color);
+  background-color: $main-bg-color;
   height: 100vh;
   display: flex;
   flex-direction: column;
-  color: var(--text-color);
+  color: $text-color;
 }
 main {
   flex: 1 1 auto;
 }
 
 a {
-  color: var(--main-blue-color);
+  color: $main-blue-color;
   text-decoration: none;
 }
 
 a:hover {
-  color: var(--main-blue-color);
+  color: $main-blue-color;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: 'Invasible';
+  line-height: normal;
+  margin-bottom: 0;
+  margin-top: rem(5);
 }
 
 /* ******************** */
@@ -79,15 +104,18 @@ a:hover {
 
 /* Scrollspy */
 .nav-link.active {
-  background-color: var(--main-bg-color-light);
+  background-color: $main-bg-color-light;
   border-radius: 5px;
 }
 /* Main Nav */
 .navbar {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  background-color: var(--main-bg-color);
+  background-color: $main-bg-color;
   transition: box-shadow 0.2s ease-in-out;
+}
+.nav-link {
+  color: $text-color;
 }
 
 /* Main Nav Scroll Active */
@@ -117,15 +145,15 @@ a:hover {
 @media (max-width: 991px) {
   .offcanvas {
     width: 250px !important;
-    background-color: var(--main-bg-color);
-    color: var(--text-color);
+    background-color: $main-bg-color;
+    color: $text-color;
     &__li {
       border-bottom: 1px solid rgba(177, 177, 177, 0.18);
       &:first-child {
         border-top: 1px solid rgba(177, 177, 177, 0.18);
       }
       &:hover {
-        background-color: var(--main-bg-color-light);
+        background-color: $main-bg-color-light;
       }
     }
     &__link {
@@ -141,103 +169,91 @@ a:hover {
 /* **************************** */
 /*             Hero             */
 /* **************************** */
-// .circular-text {
-//   font-size: 12px;
-//   position: absolute;
-// }
-
+.hero {
+  overflow: hidden;
+}
 .left-hero {
   height: rem(500);
   position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: rem(40);
+
   &__title {
+    text-align: center;
+    font-size: rem(70);
   }
   &__text {
     text-align: center;
+    max-width: rem(500);
   }
-  &__icon {
+  &__background-letter {
+    font-family: 'Invasible';
+    position: absolute;
+    font-size: rem(500);
+    opacity: 0.2;
+    line-height: 0.8;
+  }
+  &__icons-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: rem(100);
+    @media (max-width: 991px) {
+      transform: scale(0.85);
+    }
+  }
+  &__icon-container {
     font-size: rem(40);
     text-align: center;
     position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
-  &__circular-text {
-    left: 50%;
-    // margin-left: -50px;
-    top: 50%;
-    margin-top: -50px;
+  &__icon-circular-text {
     font-size: 12px;
-    position: absolute;
   }
-  &__background-letter {
-    text-align: center;
-    left: 0;
-    right: 0;
-    top: rem(220);
-    transform: translateY(-50%);
-    opacity: 0.2;
+  &__icon {
     position: absolute;
-    z-index: -1;
-    font-size: rem(600);
-    line-height: 1;
-    &:before,
-    &:after {
-      content: attr(data-glitch);
-      position: absolute;
-      left: 0;
-      right: 0;
-      margin: auto;
-    }
-    &:after {
-      color: #01ffff;
-      z-index: -1;
-      left: 10px;
-      top: 5px;
-    }
-    &:before {
-      color: #ff00fe;
-      z-index: -2;
-      left: -10px;
-      top: -5px;
-    }
   }
 }
 
 .right-hero {
   height: rem(500);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   position: relative;
+
   &__text {
-    position: absolute;
+    position: relative;
     z-index: 1;
     font-size: rem(35);
-    bottom: 65px;
-    right: 110px;
+    top: rem(150);
+    left: rem(80);
   }
   &__person {
     position: absolute;
     z-index: -1;
-    left: 0;
-    right: 0;
-    margin: auto;
-    width: rem(194);
-    top: 50%;
-    transform: translateY(-50%);
+    width: rem(266);
   }
   &__wings {
     position: absolute;
     z-index: -2;
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: 35%;
-    transform: translateY(-50%);
+    width: rem(420);
+    top: rem(40);
   }
   &__triangle {
     position: absolute;
     z-index: -3;
-    left: 0;
-    right: 0;
-    margin: auto;
-    top: 50%;
-    transform: translateY(-50%);
+    width: rem(485);
+  }
+  @media (max-width: 991px) {
+    transform: scale(0.7);
   }
 }
 
@@ -245,7 +261,6 @@ a:hover {
 /*      About       */
 /* **************************** */
 .about {
-  height: rem(500);
   display: flex;
   flex-direction: column;
   position: relative;
@@ -255,7 +270,7 @@ a:hover {
     margin-top: rem(20);
     margin-bottom: rem(30);
 
-    width: 80%;
+    max-width: rem(800);
     text-align: center;
   }
   &__icons-list {
@@ -264,10 +279,36 @@ a:hover {
     font-size: rem(30);
   }
   &__icon {
-    margin-left: rem(10);
-    margin-right: rem(10);
-    font-size: rem(30);
+    margin-left: rem(15);
+    margin-right: rem(15);
+    font-size: rem(20);
+    color: $main-bg-color;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: rem(35);
+    height: rem(35);
+    background-color: white;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+    &:hover {
+      color: $main-bg-color;
+      background-color: $main-blue-color;
+    }
   }
+  // &__icon::after {
+  //   content: '';
+  //   width: rem(35);
+  //   height: rem(35);
+  //   background-color: white;
+  //   position: absolute;
+  //   z-index: -1;
+
+  //   border-radius: 50%;
+  // }
+  // &__icon:hover::after {
+  //   background-color: $main-blue-color;
+  // }
 }
 
 /* **************************** */
@@ -285,27 +326,29 @@ a:hover {
   border: none;
   border-radius: 50%;
   outline: none;
-  background-color: var(--main-bg-color-light);
+  background-color: $main-bg-color-light;
   cursor: pointer;
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   &:hover {
-    background-color: var(--main-bg-color-light);
+    background-color: $main-bg-color-light;
   }
   &__show {
     opacity: 1;
   }
   &__icon {
-    color: var(--text-color);
+    color: $text-color;
   }
 }
 
 /* ******************** */
-/*        Swiper        */
+/*     Testimonial      */
 /* ******************** */
+
+// swiper
 .swiper {
   width: 100%;
-  height: 50rem;
+  height: rem(300);
   margin-left: auto;
   margin-right: auto;
 }
@@ -313,8 +356,11 @@ a:hover {
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: var(--main-bg-color);
+  background: $main-bg-color;
   color: white;
+  display: flex;
+  flex-direction: column;
+  gap: rem(20);
 
   /* Center slide text vertically */
   display: -webkit-box;
@@ -329,8 +375,26 @@ a:hover {
   -ms-flex-align: center;
   -webkit-align-items: center;
   align-items: center;
-}
 
+  &__text {
+    max-width: rem(800);
+  }
+  &__img {
+    border-radius: 50%;
+    width: rem(100);
+    border: $main-blue-color rem(3) solid;
+  }
+}
+.swiper-button-prev,
+.swiper-button-next {
+  color: rgb(104, 104, 104);
+}
+.swiper .swiper-pagination-bullet {
+  background-color: white;
+}
+.swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background-color: $main-blue-color;
+}
 /* ******************** */
 /*    Custom Cursor     */
 /* ******************** */
@@ -351,7 +415,7 @@ a:hover {
     margin-top: -3px;
     width: 6px;
     height: 6px;
-    background-color: var(--main-blue-color);
+    background-color: $main-blue-color;
     -webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
       margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
     transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
@@ -410,18 +474,18 @@ a:hover {
 
 /* Track */
 ::-webkit-scrollbar-track {
-  background: var(--main-bg-color-light);
+  background: $main-bg-color-light;
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-  background: var(--main-blue-color);
+  background: $main-blue-color;
   border-radius: 2px;
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--main-blue-color);
+  background: $main-blue-color;
 }
 
 /* ******************** */
@@ -465,7 +529,7 @@ a:hover {
   }
 }
 
-.title-glitch {
+.section-title-glitch {
   position: relative;
   display: flex;
   justify-content: center;
@@ -477,6 +541,6 @@ a:hover {
     z-index: -1;
     position: absolute;
     font-size: rem(50);
-    color: var(--text-gray);
+    color: $text-gray;
   }
 }

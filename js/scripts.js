@@ -101,7 +101,16 @@ function topFunction() {
 /******************************/
 /*       Custom Cursor        */
 /******************************/
+// add js-link class to swiper.js buttons to enable cursor interactions
+// *** need to put this code before seting cursor
+const swiperElements = document.querySelectorAll(
+  '.swiper-button-next, .swiper-pagination-bullet, .swiper-button-prev'
+)
+for (const element of swiperElements) {
+  element.classList.add('js-link')
+}
 
+// set custom cursor
 const cursorInner = document.querySelector('.cursor-inner')
 const cursorOuter = document.querySelector('.cursor-outer')
 const links = document.querySelectorAll(
@@ -147,6 +156,14 @@ for (const link of links) {
 }
 
 /******************************/
+/*       Circular Text        */
+/******************************/
+const list = document.querySelectorAll('.circular-text')
+for (const item of list) {
+  new CircleType(item)
+}
+
+/******************************/
 /*           Glitch           */
 /******************************/
 
@@ -155,11 +172,14 @@ for (const link of links) {
 // for (const glitch of glitchList) {
 //   glitch.dataset.glitch = glitch.textContent
 // }
+const left__hero__title = document.querySelector('.left-hero__title')
+// use create method to create new instance.
 
-/******************************/
-/*       Circular Text        */
-/******************************/
-const list = document.querySelectorAll('.circular-text')
-for (const item of list) {
-  new CircleType(item)
-}
+const writer = GlitchedWriter.create(left__hero__title, {
+  maxGhosts: 0.1,
+  ghostChance: 0.1,
+})
+const text = left__hero__title.dataset.textToGlitch
+console.log(text)
+
+writer.write(text)
