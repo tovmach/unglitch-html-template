@@ -1,0 +1,83 @@
+.hero {
+  overflow: hidden;
+}
+.left-hero {
+  height: rem(500);
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: rem(40);
+  &__title {
+    text-align: center;
+    font-size: rem(70);
+  }
+  &__text {
+    text-align: center;
+    max-width: rem(500);
+  }
+  &__background-letter {
+    font-family: 'Invasible';
+    position: absolute;
+    font-size: rem(500);
+    opacity: 0.2;
+    line-height: 0.8;
+  }
+  &__icons-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: rem(100);
+  }
+  &__icon-container {
+    font-size: rem(40);
+    text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__icon-circular-text {
+    font-size: 12px;
+  }
+  &__icon {
+    position: absolute;
+  }
+}
+
+.right-hero {
+  height: rem(500);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &__text {
+    position: relative;
+    z-index: 1;
+    font-size: rem(35);
+    top: rem(150);
+    left: rem(80);
+  }
+  &__person {
+    position: absolute;
+    z-index: -1;
+    width: rem(266);
+  }
+  &__wings {
+    position: absolute;
+    z-index: -2;
+    width: rem(420);
+    top: rem(40);
+  }
+  &__triangle {
+    position: absolute;
+    z-index: -3;
+    width: rem(485);
+  }
+  @media (max-width: 991px) {
+    transform: scale(0.7);
+  }
+}

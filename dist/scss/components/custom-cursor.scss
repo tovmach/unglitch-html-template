@@ -1,0 +1,66 @@
+@media (min-width: 992px) {
+  .mouse-cursor {
+    z-index: 1200;
+    position: fixed;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+    visibility: hidden;
+  }
+  .cursor-inner {
+    margin-left: -3px;
+    margin-top: -3px;
+    width: 6px;
+    height: 6px;
+    background-color: $main-blue-color;
+    -webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
+      margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
+      margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+  }
+
+  .cursor-outer {
+    margin-left: -15px;
+    margin-top: -15px;
+    width: 30px;
+    height: 30px;
+    border: 2px solid #ffffff;
+    opacity: 0.5;
+    -webkit-transition: all 0.08s ease-out;
+    transition: all 0.08s ease-out;
+  }
+
+  .cursor-inner.cursor-hover {
+    margin-left: -40px;
+    margin-top: -40px;
+    width: 80px;
+    height: 80px;
+    background-color: #ffffff;
+    opacity: 0.3;
+  }
+  .cursor-outer.cursor-hover {
+    opacity: 0;
+  }
+
+  .cursor-inner.cursor-hover.cursor-click {
+    margin-left: -8px;
+    margin-top: -8px;
+    width: 16px;
+    height: 16px;
+    background-color: #fff;
+  }
+
+  .cursor-outer.cursor-click {
+    margin-left: -20px;
+    margin-top: -20px;
+    width: 40px;
+    height: 40px;
+    border: 2px solid #ffffff;
+  }
+  .cursor-hidden {
+    opacity: 0;
+  }
+}

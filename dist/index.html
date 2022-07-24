@@ -28,19 +28,19 @@
     <!-- Styles -->
     <link href="css/bootstrap.min.css" rel="stylesheet" />
     <link href="css/swiper-bundle.min.css" rel="stylesheet" />
-    <link href="css/all.min.css" rel="stylesheet" />
-    <link href="css/styles.css" rel="stylesheet" />
+    <link href="css/fontawesome-all.css" rel="stylesheet" />
+    <link href="css/style.min.css" rel="stylesheet" />
 
     <!-- Favicon  -->
     <link rel="icon" href="images/favicon.png" />
 
     <!-- Webpage Title -->
-    <title>Webpage Title</title>
+    <title>Unglitch</title>
   </head>
   <body data-bs-spy="scroll" data-bs-target="#mainNavBar" tabindex="0">
-    <!-- ****** -->
-    <!-- Header -->
-    <!-- ****** -->
+    <!-- ************** -->
+    <!-- Header Content -->
+    <!-- ************** -->
     <header>
       <!-- ********** -->
       <!-- Navigation -->
@@ -53,7 +53,7 @@
         <div class="container">
           <!-- Image Logo -->
           <a class="navbar-brand logo-image" href="index.html"
-            ><img src="images/logo.svg" alt="alternative"
+            ><img src="img/logo.svg" alt="logo"
           /></a>
 
           <!-- Text Logo - Use this if you don't have a graphic logo -->
@@ -110,11 +110,11 @@
         </div>
         <!-- end of container -->
       </nav>
-      <!-- end of navbar -->
 
-      <!-- end of navigation -->
+      <!-- end of Navigation -->
     </header>
-    <!-- end of header -->
+    <!-- end of Header Content -->
+
     <!-- ************ -->
     <!-- Main Content -->
     <!-- ************ -->
@@ -165,23 +165,22 @@
               <div class="right-hero__text">編碼的力量</div>
               <img
                 class="right-hero__person"
-                src="images/man-2.png"
+                src="img/man-2.png"
                 alt="person"
               />
               <img
                 class="right-hero__triangle"
-                src="images/triangle.svg"
+                src="img/triangle.svg"
                 alt="triangle"
               />
-              <img
-                class="right-hero__wings"
-                src="images/wings.svg"
-                alt="wings"
-              />
+              <img class="right-hero__wings" src="img/wings.svg" alt="wings" />
             </div>
           </div>
         </div>
       </section>
+
+      <!-- end of Hero Section -->
+
       <!-- ************* -->
       <!--  About Section -->
       <!-- ************* -->
@@ -216,6 +215,9 @@
         </div>
         <!-- <img class="about__img" src="images/bat.svg" alt="bat" /> -->
       </section>
+
+      <!-- end of About Section -->
+
       <!-- ******************* -->
       <!-- Testimonial Section -->
       <!-- ******************* -->
@@ -232,7 +234,7 @@
               <div class="swiper-slide">
                 <img
                   class="swiper-slide__img"
-                  src="./images/man-profile.jpg"
+                  src="img/man-profile.jpg"
                   alt="man"
                 />
                 <div class="swiper-slide__text">
@@ -245,7 +247,7 @@
               <div class="swiper-slide">
                 <img
                   class="swiper-slide__img"
-                  src="./images/girl-profile.jpg"
+                  src="img/girl-profile.jpg"
                   alt="man"
                 />
                 <div class="swiper-slide__text">
@@ -264,31 +266,14 @@
         </div>
       </section>
 
-      <!-- ****************** -->
-      <!-- Back To Top Button -->
-      <!-- ****************** -->
-      <button
-        onclick="topFunction()"
-        id="backToTopButton"
-        class="back-to-top-button"
-      >
-        <i class="fa-solid fa-angle-up fa-xl back-to-top-button__icon"></i>
-      </button>
-      <!-- end of back to top button -->
-      <!-- ****************** -->
-      <!--    Custom Cursor   -->
-      <!-- ****************** -->
-      <div class="mouse-cursor cursor-outer"></div>
-      <div class="mouse-cursor cursor-inner"></div>
-
-      <!-- end of custom cursor -->
+      <!-- end of Testimonial Section -->
     </main>
-    <!-- end main content -->
+    <!-- end of Main Content -->
+
     <!-- ****** -->
     <!-- Footer -->
     <!-- ****** -->
-
-    <footer class="footer">
+    <footer>
       <div class="container">
         <div class="p-3">
           Copyright ©
@@ -300,9 +285,31 @@
       </div>
     </footer>
     <!-- end of Footer -->
-    <!-- ******* -->
-    <!-- Scripts -->
-    <!-- ******* -->
+
+    <!-- ****************** -->
+    <!-- Back To Top Button -->
+    <!-- ****************** -->
+    <button
+      onclick="topFunction()"
+      id="backToTopButton"
+      class="back-to-top-button"
+    >
+      <i class="fa-solid fa-angle-up fa-xl back-to-top-button__icon"></i>
+    </button>
+
+    <!-- end of Back To Top Button -->
+
+    <!-- ****************** -->
+    <!--    Custom Cursor   -->
+    <!-- ****************** -->
+    <div class="mouse-cursor cursor-outer"></div>
+    <div class="mouse-cursor cursor-inner"></div>
+
+    <!-- end of Custom Cursor -->
+
+    <!-- ****************** -->
+    <!--       Scripts      -->
+    <!-- ****************** -->
     <!-- Glitch cange later -->
     <script src="https://cdn.jsdelivr.net/npm/glitched-writer/lib/index.min.js"></script>
     <!-- Bootstrap framework -->
@@ -312,6 +319,7 @@
     <!-- Circletype -->
     <script src="js/circletype.min.js"></script>
     <!-- Custom scripts -->
-    <script src="js/scripts.js"></script>
+    <script src="js/app.js"></script>
+    <!-- end of Scripts -->
   </body>
 </html>
