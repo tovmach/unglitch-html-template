@@ -7,6 +7,7 @@ window.onscroll = function () {
 
 window.onload = function () {
   scrollFunction()
+  customCursor()
 }
 
 /******************************/
@@ -111,50 +112,51 @@ for (const element of swiperElements) {
 }
 
 // set custom cursor
-const cursorInner = document.querySelector('.cursor-inner')
-const cursorOuter = document.querySelector('.cursor-outer')
-const links = document.querySelectorAll(
-  'a, button, .js-link, input[type="button"], input[type="submit"]'
-)
+function customCursor() {
+  const cursorInner = document.querySelector('.cursor-inner')
+  const cursorOuter = document.querySelector('.cursor-outer')
+  const links = document.querySelectorAll(
+    'a, button, .js-link, input[type="button"], input[type="submit"]'
+  )
 
-document.addEventListener('mousemove', (e) => {
-  cursorInner.style.transform =
-    'translate(' + e.clientX + 'px, ' + e.clientY + 'px)'
-  cursorOuter.style.transform =
-    'translate(' + e.clientX + 'px, ' + e.clientY + 'px)'
-  cursorInner.style.visibility = 'visible'
+  document.addEventListener('mousemove', (e) => {
+    cursorInner.style.transform =
+      'translate(' + e.clientX + 'px, ' + e.clientY + 'px)'
+    cursorOuter.style.transform =
+      'translate(' + e.clientX + 'px, ' + e.clientY + 'px)'
+    cursorInner.style.visibility = 'visible'
 
-  cursorOuter.style.visibility = 'visible'
-})
-
-document.addEventListener('mousedown', () => {
-  cursorInner.classList.add('cursor-click')
-  cursorOuter.classList.add('cursor-click')
-})
-document.addEventListener('mouseup', () => {
-  cursorInner.classList.remove('cursor-click')
-  cursorOuter.classList.remove('cursor-click')
-})
-document.addEventListener('mouseenter', () => {
-  cursorInner.classList.remove('cursor-hidden')
-  cursorOuter.classList.remove('cursor-hidden')
-})
-document.addEventListener('mouseleave', () => {
-  cursorInner.classList.add('cursor-hidden')
-  cursorOuter.classList.add('cursor-hidden')
-})
-
-for (const link of links) {
-  link.addEventListener('mouseover', () => {
-    cursorInner.classList.add('cursor-hover')
-    cursorOuter.classList.add('cursor-hover')
+    cursorOuter.style.visibility = 'visible'
   })
-  link.addEventListener('mouseout', () => {
-    cursorInner.classList.remove('cursor-hover')
-    cursorOuter.classList.remove('cursor-hover')
+
+  document.addEventListener('mousedown', () => {
+    cursorInner.classList.add('cursor-click')
+    cursorOuter.classList.add('cursor-click')
   })
+  document.addEventListener('mouseup', () => {
+    cursorInner.classList.remove('cursor-click')
+    cursorOuter.classList.remove('cursor-click')
+  })
+  document.addEventListener('mouseenter', () => {
+    cursorInner.classList.remove('cursor-hidden')
+    cursorOuter.classList.remove('cursor-hidden')
+  })
+  document.addEventListener('mouseleave', () => {
+    cursorInner.classList.add('cursor-hidden')
+    cursorOuter.classList.add('cursor-hidden')
+  })
+
+  for (const link of links) {
+    link.addEventListener('mouseover', () => {
+      cursorInner.classList.add('cursor-hover')
+      cursorOuter.classList.add('cursor-hover')
+    })
+    link.addEventListener('mouseout', () => {
+      cursorInner.classList.remove('cursor-hover')
+      cursorOuter.classList.remove('cursor-hover')
+    })
+  }
 }
-
 /******************************/
 /*       Circular Text        */
 /******************************/
@@ -184,3 +186,5 @@ const writer = GlitchedWriter.create(left__hero__title, {
 })
 
 writer.write(text)
+
+console.log('hello')
