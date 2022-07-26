@@ -18,21 +18,21 @@ export const html = () => {
       .pipe(fileinclude())
       .pipe(app.plugins.replace(/@img\//g, 'img/'))
       // webpHtml puts the img in the picture tag
-      //.pipe(webpHtmlNosvg())
+      // .pipe(webpHtmlNosvg())
       // adds the vertion number ?V=1 to css and js files
-      // .pipe(
-      //   versionNumber({
-      //     value: '%DT%',
-      //     append: {
-      //       key: '_v',
-      //       cover: 0,
-      //       to: ['css', 'js'],
-      //     },
-      //     output: {
-      //       file: 'gulp/version.json',
-      //     },
-      //   })
-      // )
+      .pipe(
+        versionNumber({
+          value: '%DT%',
+          append: {
+            key: '_v',
+            cover: 0,
+            to: ['css', 'js'],
+          },
+          output: {
+            file: 'gulp/version.json',
+          },
+        })
+      )
       .pipe(prettier())
       .pipe(app.gulp.dest(app.path.build.html))
       .pipe(app.plugins.browsersync.stream())

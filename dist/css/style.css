@@ -298,12 +298,16 @@ h6 {
   -webkit-box-direction: normal;
   -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
   position: relative;
+  margin-bottom: 7.5rem;
 }
 
 .about__text {
   margin: auto;
-  margin-top: 1.25rem;
+  margin-top: 3.125rem;
   margin-bottom: 1.875rem;
   max-width: 50rem;
   text-align: center;
@@ -317,6 +321,7 @@ h6 {
   -ms-flex-pack: center;
   justify-content: center;
   font-size: 1.875rem;
+  margin-top: 4.375rem;
 }
 
 .about__icon {
@@ -345,6 +350,14 @@ h6 {
 .about__icon:hover {
   color: #2b2c35;
   background-color: #01ffff;
+}
+
+.about__img {
+  position: absolute;
+  z-index: -1;
+  top: 1.25rem;
+  width: 50rem;
+  opacity: 0.2;
 }
 
 /* **************************** */
@@ -434,6 +447,42 @@ h6 {
 .skill__icon {
   font-size: 2.5rem;
   position: absolute;
+}
+
+/* **************************** */
+
+/*            Services          */
+
+/* **************************** */
+
+.service {
+  border: #01ffff solid 0.3125rem;
+  border-radius: 0.625rem;
+  padding: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  gap: 0.625rem;
+}
+
+.service__icon {
+  font-size: 6.25rem;
+}
+
+.service__title {
+  font-size: 1.875rem;
+}
+
+.service__link {
+  -ms-flex-item-align: start;
+  align-self: flex-start;
 }
 
 /* **************************** */
