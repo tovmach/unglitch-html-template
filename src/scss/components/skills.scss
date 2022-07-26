@@ -1,0 +1,60 @@
+.skill-title {
+  margin-bottom: rem(20);
+}
+
+.years-of-experience {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  &__number {
+    font-size: rem(250);
+    font-family: 'Invasible';
+    line-height: 0.7;
+    opacity: 0.6;
+  }
+  &__text {
+    opacity: 0.6;
+    font-size: rem(40);
+  }
+}
+
+.skills-list {
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  .skills-list__skill {
+    margin-right: rem(10);
+    margin-left: rem(10);
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+  }
+}
+
+.skill {
+  display: flex;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  border: white 1px solid;
+  height: rem(110);
+  width: rem(110);
+  border-radius: 50%;
+  &.active {
+    color: $main-blue-color;
+    border: $main-blue-color 1px solid;
+  }
+
+  &__circular-text {
+    font-size: rem(11);
+  }
+  &__icon {
+    font-size: rem(40);
+    position: absolute;
+  }
+}
+
+.skill-description {
+  // text-align: center;
+}

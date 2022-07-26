@@ -62,7 +62,7 @@ for (const li of navLiList) {
 }
 
 /**********************/
-/*       Swiper       */
+/*       Swiper Testimonial       */
 /**********************/
 var swiper = new Swiper('#testimonialSwiper', {
   slidesPerView: 1,
@@ -77,6 +77,23 @@ var swiper = new Swiper('#testimonialSwiper', {
     prevEl: '.swiper-button-prev',
   },
 })
+/**********************/
+/*      Skills       */
+/**********************/
+const yearsOfExperience = document.querySelector('.years-of-experience__number')
+const skills = document.querySelectorAll('.skills-list__skill')
+
+const firstSkillYears = skills[0].dataset.years
+yearsOfExperience.textContent = firstSkillYears
+
+for (const skill of skills) {
+  console.log(skill)
+  skill.addEventListener('click', () => {
+    const years = skill.dataset.years
+    console.log(years)
+    yearsOfExperience.textContent = years
+  })
+}
 
 /******************************/
 /*     Back To Top Button     */

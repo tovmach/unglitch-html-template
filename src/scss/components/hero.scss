@@ -60,17 +60,28 @@
     font-size: rem(35);
     top: rem(150);
     left: rem(80);
+    color: rgb(249, 195, 0);
+    -webkit-text-stroke-width: 0.5px;
+    -webkit-text-stroke-color: black;
   }
   &__person {
     position: absolute;
     z-index: -1;
     width: rem(266);
   }
+  //small wings
+  // &__wings {
+  //   position: absolute;
+  //   z-index: -2;
+  //   width: rem(420);
+  //   top: rem(40);
+  // }
+  // wings-2
   &__wings {
     position: absolute;
     z-index: -2;
-    width: rem(420);
-    top: rem(40);
+    width: rem(550);
+    top: rem(120);
   }
   &__triangle {
     position: absolute;
