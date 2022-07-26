@@ -37,13 +37,13 @@
   position: relative;
   justify-content: center;
   align-items: center;
-  border: white 1px solid;
+  // border: white 1px solid;
   height: rem(110);
   width: rem(110);
   border-radius: 50%;
   &.active {
     color: $main-blue-color;
-    border: $main-blue-color 1px solid;
+    // border: $main-blue-color 1px solid;
   }
 
   &__circular-text {

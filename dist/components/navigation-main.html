@@ -1,0 +1,63 @@
+<nav
+  id="mainNavBar"
+  class="navbar navbar-expand-lg fixed-top navbar-dark"
+  aria-label="Main navigation"
+>
+  <div class="container">
+    <!-- Image Logo -->
+    <a class="navbar-brand logo-image" href="index.html"
+      ><img src="img/svg/logo.svg" alt="logo"
+    /></a>
+
+    <!-- Text Logo - Use this if you don't have a graphic logo -->
+    <!-- <a class="navbar-brand logo-text" href="index.html">Unglitch</a> -->
+
+    <!-- Mobile nav button -->
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbar"
+      aria-controls="offcanvasNavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <!-- Nav menu links -->
+    <div
+      class="offcanvas offcanvas-start"
+      tabindex="-1"
+      id="offcanvasNavbar"
+      aria-labelledby="offcanvasNavbarLabel"
+    >
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title">Unglitch</h5>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="offcanvas"
+          aria-label="Close"
+        ></button>
+      </div>
+      <ul class="navbar-nav navbar-nav-scroll" id="navlist">
+        <li class="offcanvas__li nav-item">
+          <a class="offcanvas__link nav-link" href="#header">Home</a>
+        </li>
+        <li class="offcanvas__li nav-item">
+          <a class="offcanvas__link nav-link" href="#article">Article</a>
+        </li>
+        <li class="offcanvas__li nav-item">
+          <a class="offcanvas__link nav-link" href="#features">Features</a>
+        </li>
+        <li class="offcanvas__li nav-item">
+          <a class="offcanvas__link nav-link" href="#pricing">Pricing</a>
+        </li>
+
+        <li class="offcanvas__li nav-item">
+          <a class="offcanvas__link nav-link" href="#contact">Contact</a>
+        </li>
+      </ul>
+    </div>
+    <!-- end of navbar-collapse -->
+  </div>
+  <!-- end of container -->
+</nav>
