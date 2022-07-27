@@ -87,10 +87,9 @@ const firstSkillYears = skills[0].dataset.years
 yearsOfExperience.textContent = firstSkillYears
 
 for (const skill of skills) {
-  console.log(skill)
   skill.addEventListener('click', () => {
     const years = skill.dataset.years
-    console.log(years)
+
     yearsOfExperience.textContent = years
   })
 }
@@ -203,5 +202,3 @@ const writer = GlitchedWriter.create(left__hero__title, {
 })
 
 writer.write(text)
-
-console.log('hello')

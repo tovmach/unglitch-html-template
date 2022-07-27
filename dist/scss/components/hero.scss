@@ -89,8 +89,8 @@
   &__wings {
     position: absolute;
     z-index: -2;
-    width: rem(520);
-    top: rem(0);
+    width: rem(460);
+    top: rem(25);
     @media (max-width: 576px) {
       top: rem(-70);
     }
