@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 /* Description: Master CSS file */
 
 /* ****************************************
@@ -451,6 +453,76 @@ h6 {
 
 /* **************************** */
 
+/*              Experience           */
+
+/* **************************** */
+
+.experinece__tabs-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  list-style-type: none;
+  /* Remove bullets */
+  padding: 1.25rem;
+  padding: 0;
+  margin: 0;
+}
+
+.experinece__tab-button {
+  padding: 0.625rem;
+  -webkit-transition: 0.3s ease-in;
+  -o-transition: 0.3s ease-in;
+  transition: 0.3s ease-in;
+  border: #2b2c35 0.125rem solid;
+  border-radius: 0.625rem;
+}
+
+.experinece__tab-button.active {
+  color: #01ffff;
+  border: #01ffff 0.125rem solid;
+}
+
+.experinece__content {
+  min-height: 21.25rem;
+}
+
+.job__title {
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+
+.job__date {
+  margin-bottom: 0.625rem;
+}
+
+.job__tasks-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.job__task {
+  position: relative;
+  padding-left: 1.875rem;
+  margin-bottom: 0.625rem;
+}
+
+.job__task:before {
+  color: #01ffff;
+  content: "▹";
+  position: absolute;
+  left: 0px;
+}
+
+/* **************************** */
+
 /*            Services          */
 
 /* **************************** */
@@ -541,16 +613,21 @@ h6 {
 }
 
 .work__img {
-  border-radius: 0.625rem;
-  -webkit-transition: 0.5s ease-in-out;
-  -o-transition: 0.5s ease-in-out;
-  transition: 0.5s ease-in-out;
+  border-radius: 0.375rem;
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  -o-transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
 }
 
 .work:hover .work__img {
-  -webkit-transform: scale(1.05);
-  -ms-transform: scale(1.05);
-  transform: scale(1.05);
+  -webkit-transform: scale(1.01);
+  -ms-transform: scale(1.01);
+  transform: scale(1.01);
 }
 
 .work__overlay {
@@ -586,7 +663,7 @@ h6 {
 
 .overlay {
   width: 100%;
-  border-radius: 0.625rem;
+  border-radius: 0.375rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -625,9 +702,12 @@ h6 {
   padding: 0.3125rem;
   width: 50%;
   text-align: center;
-  -webkit-transition: 0.3s ease-in-out;
-  -o-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
+  -webkit-transition: border 0.3s ease-in-out;
+  -o-transition: border 0.3s ease-in-out;
+  transition: border 0.3s ease-in-out;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
   cursor: pointer;
 }
 
@@ -875,7 +955,7 @@ h6 {
     margin-top: -3px;
     width: 6px;
     height: 6px;
-    background-color: #01ffff;
+    background-color: #ffffff;
     -webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
       margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
     -o-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
@@ -927,6 +1007,12 @@ h6 {
 
   .cursor-hidden {
     opacity: 0;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1200px;
   }
 }
 

@@ -101,6 +101,12 @@ h6 {
   margin-top: rem(5);
 }
 
+.container {
+  @media (min-width: 1400px) {
+    max-width: 1200px;
+  }
+}
+
 /* **************************** */
 /*          Navigation          */
 /* **************************** */
@@ -120,6 +126,11 @@ h6 {
 /*              Skills           */
 /* **************************** */
 @import 'components/skills';
+
+/* **************************** */
+/*              Experience           */
+/* **************************** */
+@import 'components/experience';
 
 /* **************************** */
 /*            Services          */

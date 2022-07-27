@@ -1,0 +1,53 @@
+.experinece {
+  &__tabs-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    list-style-type: none; /* Remove bullets */
+    //gap: rem(10);
+    padding: rem(20);
+    padding: 0;
+    margin: 0;
+  }
+  &__tab-li {
+  }
+  &__tab-button {
+    padding: rem(10);
+    transition: 0.3s ease-in;
+    border: $main-bg-color rem(2) solid;
+    border-radius: rem(10);
+    &.active {
+      color: $main-color;
+      border: $main-color rem(2) solid;
+    }
+  }
+  &__content {
+    min-height: rem(340);
+  }
+}
+
+.job {
+  &__title {
+    font-size: rem(30);
+    font-weight: bold;
+  }
+  &__date {
+    margin-bottom: rem(10);
+  }
+  &__tasks-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__task {
+    position: relative;
+    padding-left: rem(30);
+    margin-bottom: rem(10);
+  }
+  &__task:before {
+    color: $main-color;
+    content: '▹';
+    position: absolute;
+    left: 0px;
+  }
+}
