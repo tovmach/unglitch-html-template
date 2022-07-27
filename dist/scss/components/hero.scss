@@ -8,41 +8,57 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: rem(40);
+  gap: rem(15);
+  @media (max-width: 576px) {
+    gap: rem(0);
+    height: rem(350);
+  }
   &__title {
     text-align: center;
     font-size: rem(70);
+    @media (max-width: 576px) {
+      font-size: rem(50);
+    }
   }
   &__text {
     text-align: center;
     max-width: rem(500);
+    margin-bottom: 0;
   }
   &__background-letter {
     font-family: 'Invasible';
     position: absolute;
-    font-size: rem(500);
+    font-size: rem(660);
     opacity: 0.2;
     line-height: 0.8;
+    margin-top: rem(70);
+    @media (max-width: 576px) {
+      font-size: rem(500);
+    }
   }
   &__icons-list {
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
-    align-items: center;
-    gap: rem(100);
+    padding: 0;
+    @media (max-width: 576px) {
+      transform: scale(0.8);
+    }
   }
   &__icon-container {
-    font-size: rem(40);
-    text-align: center;
-    position: relative;
     display: flex;
+    position: relative;
     justify-content: center;
     align-items: center;
+    // border: white 1px solid;
+    height: rem(110);
+    width: rem(110);
+    border-radius: 50%;
   }
   &__icon-circular-text {
-    font-size: 12px;
+    font-size: rem(11);
   }
   &__icon {
+    font-size: rem(40);
     position: absolute;
   }
 }
@@ -53,6 +69,9 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  @media (max-width: 576px) {
+    height: rem(350);
+  }
 
   &__text {
     position: relative;
@@ -72,6 +91,9 @@
     z-index: -2;
     width: rem(520);
     top: rem(0);
+    @media (max-width: 576px) {
+      top: rem(-70);
+    }
   }
   // wings-2
   // &__wings {

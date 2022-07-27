@@ -35,7 +35,7 @@
   &__img {
     border-radius: 50%;
     width: rem(100);
-    border: $main-blue-color rem(3) solid;
+    border: $main-color rem(3) solid;
   }
 }
 .swiper-button-prev,
@@ -46,5 +46,5 @@
   background-color: white;
 }
 .swiper .swiper-pagination-bullet.swiper-pagination-bullet-active {
-  background-color: $main-blue-color;
+  background-color: $main-color;
 }
