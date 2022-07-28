@@ -1,3 +1,29 @@
+.skills {
+  &__container {
+    min-height: rem(275);
+  }
+  &__description {
+    text-align: center;
+  }
+  &__list {
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin-bottom: rem(5);
+    @media (max-width: $lg-991px) {
+      margin-bottom: 0;
+      transform: scale(0.9);
+    }
+    @media (max-width: $sm-575px) {
+      transform: scale(0.8);
+    }
+  }
+  &__item {
+    list-style-type: none; /* Remove bullets */
+    padding: 0; /* Remove padding */
+  }
+}
+
 .years-of-experience {
   display: flex;
   flex-direction: column;
@@ -9,26 +35,16 @@
     font-family: 'Invasible';
     line-height: 0.7;
     opacity: 0.6;
+    @media (max-width: $lg-991px) {
+      font-size: rem(200);
+    }
   }
   &__text {
     opacity: 0.6;
     font-size: rem(40);
-  }
-  @media (max-width: 576px) {
-    transform: scale(0.9);
-  }
-}
-
-.skills-list {
-  display: flex;
-  justify-content: center;
-  padding: 0;
-  .skills-list__skill {
-    list-style-type: none; /* Remove bullets */
-    padding: 0; /* Remove padding */
-  }
-  @media (max-width: 576px) {
-    transform: scale(0.8);
+    @media (max-width: $lg-991px) {
+      font-size: rem(30);
+    }
   }
 }
 
@@ -43,7 +59,6 @@
   border-radius: 50%;
   &.active {
     color: $main-color;
-    // border: $main-color 1px solid;
   }
 
   &__circular-text {
@@ -53,8 +68,4 @@
     font-size: rem(40);
     position: absolute;
   }
-}
-
-.skill-description {
-  text-align: center;
 }

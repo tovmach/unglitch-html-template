@@ -1,0 +1,29 @@
+.form-control {
+  background-color: transparent;
+  border-color: $main-color;
+  color: white;
+}
+.form-control:focus {
+  background-color: transparent;
+  border-color: $main-color;
+  color: white;
+}
+
+.form .form-textarea {
+  min-height: rem(200);
+  color: white;
+}
+
+.form-button {
+  border: $main-color rem(1) solid;
+  width: 100%;
+  margin-top: rem(15);
+  background-color: transparent;
+  color: white;
+  border-radius: 0.375rem;
+  padding: rem(10);
+  transition: background-color 0.3s ease-in-out;
+  &:hover {
+    background-color: rgba($color: $main-color, $alpha: 0.05);
+  }
+}

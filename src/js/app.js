@@ -81,7 +81,7 @@ var swiper = new Swiper('#testimonialSwiper', {
 /*      Skills       */
 /**********************/
 const yearsOfExperience = document.querySelector('.years-of-experience__number')
-const skills = document.querySelectorAll('.skills-list__skill')
+const skills = document.querySelectorAll('.skill')
 
 const firstSkillYears = skills[0].dataset.years
 yearsOfExperience.textContent = firstSkillYears

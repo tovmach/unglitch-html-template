@@ -45,11 +45,11 @@ $main-color: #01ffff;
 $secondary-color: #ff00fe;
 
 // breakpoints
-$sm-576px: 576px;
-$md-768px: 768px;
-$lg-992px: 992px;
-$xl-1200px: 1200px;
-$xxl-1400px: 1400px;
+$sm-575px: 575px;
+$md-767px: 767px;
+$lg-991px: 991px;
+//$xl-1200px: 1200px;
+//$xxl-1400px: 1400px;
 
 /* ************************ */
 /*      General Styles      */
@@ -64,7 +64,7 @@ $xxl-1400px: 1400px;
 // tags
 html {
   /* Offset scroll anchor for fixed navbar */
-  scroll-padding-top: 56px;
+  scroll-padding-top: rem(56);
 }
 body {
   background-color: $main-bg-color;
@@ -103,7 +103,7 @@ h6 {
 
 .container {
   @media (min-width: 1400px) {
-    max-width: 1200px;
+    max-width: rem(1200);
   }
 }
 
@@ -150,6 +150,11 @@ h6 {
 /*     Testimonial      */
 /* ******************** */
 @import 'components/testimonial';
+
+/* ******************** */
+/*     Contact      */
+/* ******************** */
+@import 'components/contact';
 
 /* ******************** */
 /*    Custom Cursor     */

@@ -31,10 +31,8 @@
   transition: transform 0.3s ease-in-out;
 }
 
-@media (min-width: 992px) {
-  #navlist {
-    margin-left: auto;
-  }
+.navbar-nav {
+  margin-left: auto;
 }
 
 /* offcanvas mobile menu */
@@ -60,5 +58,8 @@
   /* need to hide the offcanvas-backdrop for clean scroll down to id transition */
   .navbar-scrolled-down .offcanvas-backdrop {
     opacity: 0;
+  }
+  .navbar-nav {
+    margin-left: 0;
   }
 }

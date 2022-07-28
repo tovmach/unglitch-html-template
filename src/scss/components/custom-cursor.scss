@@ -11,54 +11,48 @@
     visibility: hidden;
   }
   .cursor-inner {
-    margin-left: -3px;
-    margin-top: -3px;
-    width: 6px;
-    height: 6px;
-    background-color: #ffffff;
-    -webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
-      margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    margin-left: rem(-3);
+    margin-top: rem(-3);
+    width: rem(6);
+    height: rem(6);
+    background-color: $main-color;
     transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
       margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
   }
-
   .cursor-outer {
-    margin-left: -15px;
-    margin-top: -15px;
-    width: 30px;
-    height: 30px;
-    border: 2px solid #ffffff;
+    margin-left: rem(-15);
+    margin-top: rem(-15);
+    width: rem(30);
+    height: rem(30);
+    border: rem(2) solid white;
     opacity: 0.5;
     -webkit-transition: all 0.08s ease-out;
     transition: all 0.08s ease-out;
   }
-
   .cursor-inner.cursor-hover {
-    margin-left: -40px;
-    margin-top: -40px;
-    width: 80px;
-    height: 80px;
-    background-color: #ffffff;
+    margin-left: rem(-40);
+    margin-top: rem(-40);
+    width: rem(80);
+    height: rem(80);
+    background-color: white;
     opacity: 0.3;
   }
   .cursor-outer.cursor-hover {
     opacity: 0;
   }
-
   .cursor-inner.cursor-hover.cursor-click {
-    margin-left: -8px;
-    margin-top: -8px;
-    width: 16px;
-    height: 16px;
-    background-color: #fff;
+    margin-left: rem(-8);
+    margin-top: rem(-8);
+    width: 1rem rem(6);
+    height: 1rem rem(6);
+    background-color: white;
   }
-
   .cursor-outer.cursor-click {
-    margin-left: -20px;
-    margin-top: -20px;
-    width: 40px;
-    height: 40px;
-    border: 2px solid #ffffff;
+    margin-left: rem(-20);
+    margin-top: rem(-20);
+    width: rem(40);
+    height: rem(40);
+    border: rem(2) solid white;
   }
   .cursor-hidden {
     opacity: 0;

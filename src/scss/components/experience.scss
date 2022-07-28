@@ -8,12 +8,16 @@
     padding: rem(20);
     padding: 0;
     margin: 0;
+    @media (max-width: 767px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
   }
   &__tab-li {
   }
   &__tab-button {
     padding: rem(10);
-    // transition: 0.3s ease-in;
     border: $main-bg-color rem(2) solid;
     border-radius: rem(10);
     &.active {
@@ -22,7 +26,7 @@
     }
   }
   &__content {
-    min-height: rem(340);
+    min-height: rem(255);
   }
 }
 
