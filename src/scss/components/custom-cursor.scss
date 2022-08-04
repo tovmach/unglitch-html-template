@@ -41,10 +41,10 @@
     opacity: 0;
   }
   .cursor-inner.cursor-hover.cursor-click {
-    margin-left: rem(-8);
-    margin-top: rem(-8);
-    width: 1rem rem(6);
-    height: 1rem rem(6);
+    margin-left: rem(-20);
+    margin-top: rem(-20);
+    width: rem(40);
+    height: rem(40);
     background-color: white;
   }
   .cursor-outer.cursor-click {

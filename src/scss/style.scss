@@ -1,26 +1,28 @@
 /* Description: Master CSS file */
 
-/* ****************************************
-Table Of Contents:
-- General Styles
-- Navigation
-- Header
-- Testimonials
-- Features
-- Video
-- Video Modal
-- Details 1
-- Details Modal
-- Details 2
-- Statistics
-- Screenshots
-- Download
-- Footer
-- Copyright
-- Back To Top Button
-- Extra Pages
-- Media Queries
-****************************************** */
+/*
+    Template Name: unglitch - Responsive Bootstrap 5 One Page Portfolio Template
+    Template URI: *****
+    Description: Responsive Bootstrap 5 One Page Portfolio Template
+    Author: Michael Tovmach
+    Author URI: https://www.tovmach.com/
+    Version: 1.0
+*/
+
+/*=================================
+   CSS INDEX
+===================================
+    1. Default CSS
+    2. Header CSS
+    3. Hero CSS
+    4. About CSS
+    5. Portfolio CSS
+    6. Blog CSS
+    7. Contact CSS
+    8. Footer CSS
+
+ =================================*/
+
 /* ************************ */
 /*         Function         */
 /* ************************ */
@@ -72,6 +74,7 @@ body {
   display: flex;
   flex-direction: column;
   color: $text-color;
+  padding-top: rem(56);
 }
 main {
   flex: 1 1 auto;
