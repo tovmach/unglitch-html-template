@@ -110,6 +110,6 @@
   }
 }
 
-// .work:hover .overlay__content {
-//   transform: scale(1.05);
-// }
+.modal {
+  z-index: 1500;
+}

@@ -1,3 +1,18 @@
+.contact {
+  position: relative;
+
+  &__img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    height: 100%;
+    z-index: -1;
+    margin-left: auto;
+  }
+}
+
 .form-control {
   background-color: transparent;
   border-color: $main-color;

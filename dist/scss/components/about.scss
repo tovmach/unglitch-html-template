@@ -10,13 +10,14 @@
     padding-top: rem(30);
     padding-bottom: rem(30);
     border: $main-color solid rem(5);
-    //border-bottom: $main-color solid rem(5);
     border-radius: rem(10);
   }
 
   &__text {
     margin: auto;
     max-width: rem(800);
+    padding-left: rem(20);
+    padding-right: rem(20);
   }
   &__icons-list {
     display: flex;

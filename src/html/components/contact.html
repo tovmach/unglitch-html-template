@@ -1,48 +1,54 @@
-<section class="contact" id="contact">
+<section id="contact">
   <div class="container">
     <div class="section-title-glitch">
-      <h2 class="section-title-glitch__title">Contact</h2>
-      <div class="section-title-glitch__text">₮ⱧłɆ₲ł₦₦ł₦₲</div>
+      <h2 class="section-title-glitch__title glitch-1">Contact</h2>
+      <div class="section-title-glitch__text">世界をハッ</div>
     </div>
-
-    <form autocomplete="off" method="post" class="form" action="#">
-      <div class="row">
-        <div class="col-12 col-md-6">
-          <div class="form-floating mb-3">
-            <input
-              autocomplete="off"
-              type="Name"
-              class="form-control"
-              id="floatingInput"
-              placeholder="Javier Black"
-            />
-            <label for="floatingInput">Name</label>
+    <div class="contact">
+      <form autocomplete="off" method="post" class="form" action="#">
+        <div class="row">
+          <div class="col-12 col-md-6">
+            <div class="form-floating mb-3">
+              <input
+                autocomplete="off"
+                type="Name"
+                class="form-control"
+                id="floatingInput"
+                placeholder="Javier Black"
+              />
+              <label for="floatingInput">Name</label>
+            </div>
+          </div>
+          <div class="col-12 col-md-6">
+            <div class="form-floating mb-3">
+              <input
+                autocomplete="off"
+                type="email"
+                class="form-control"
+                id="floatingInput"
+                placeholder="name@example.com"
+              />
+              <label for="floatingInput">Email</label>
+            </div>
           </div>
         </div>
-        <div class="col-12 col-md-6">
-          <div class="form-floating mb-3">
-            <input
-              autocomplete="off"
-              type="email"
-              class="form-control"
-              id="floatingInput"
-              placeholder="name@example.com"
-            />
-            <label for="floatingInput">Email</label>
-          </div>
+        <div class="form-floating">
+          <textarea
+            class="form-textarea form-control"
+            placeholder="Leave a comment here"
+            id="floatingTextarea2"
+          ></textarea>
+          <label for="floatingTextarea2">Comments</label>
         </div>
-      </div>
-      <div class="form-floating">
-        <textarea
-          class="form-textarea form-control"
-          placeholder="Leave a comment here"
-          id="floatingTextarea2"
-        ></textarea>
-        <label for="floatingTextarea2">Comments</label>
-      </div>
-      <button class="form-button" type="submit">
-        Send <i class="fa-solid fa-paper-plane"></i>
-      </button>
-    </form>
+        <button class="form-button" type="submit">
+          Send <i class="fa-solid fa-paper-plane"></i>
+        </button>
+      </form>
+      <img
+        class="img-fluid contact__img"
+        src="@img/photos/ribs.png"
+        alt="ribs"
+      />
+    </div>
   </div>
 </section>

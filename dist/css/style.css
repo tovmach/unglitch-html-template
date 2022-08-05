@@ -328,6 +328,8 @@ h6 {
 .about__text {
   margin: auto;
   max-width: 50rem;
+  padding-left: 1.25rem;
+  padding-right: 1.25rem;
 }
 
 .about__icons-list {
@@ -384,12 +386,13 @@ h6 {
 }
 
 .skills__list {
+  width: 27.5rem;
+  overflow: auto;
+  margin-left: auto;
+  margin-right: auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
   padding: 0;
   margin-bottom: 0.3125rem;
 }
@@ -725,6 +728,10 @@ h6 {
   margin-left: 0.625rem;
 }
 
+.modal {
+  z-index: 1500;
+}
+
 /* **************************** */
 
 /*      Back To Top Button      */
@@ -775,7 +782,7 @@ h6 {
 
 .swiper {
   width: 100%;
-  min-height: 18.75rem;
+  min-height: 15.625rem;
   margin-left: auto;
   margin-right: auto;
 }
@@ -832,6 +839,22 @@ h6 {
 
 /* ******************** */
 
+.contact {
+  position: relative;
+}
+
+.contact__img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  height: 100%;
+  z-index: -1;
+  margin-left: auto;
+}
+
 .form-control {
   background-color: transparent;
   border-color: #01ffff;
@@ -881,7 +904,7 @@ h6 {
 /* width */
 
 ::-webkit-scrollbar {
-  width: 10px;
+  width: 0.625rem;
 }
 
 /* Track */
@@ -894,13 +917,26 @@ h6 {
 
 ::-webkit-scrollbar-thumb {
   background: #01ffff;
-  border-radius: 2px;
+  border-radius: 0.125rem;
 }
 
 /* Handle on hover */
 
 ::-webkit-scrollbar-thumb:hover {
   background: #01ffff;
+}
+
+::-webkit-scrollbar:horizontal {
+  height: 0.125rem;
+}
+
+::-webkit-scrollbar-thumb:horizontal {
+  background: #01ffff;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-track:horizontal {
+  background: #363742;
 }
 
 /* ******************** */
@@ -972,388 +1008,10 @@ h6 {
 }
 
 .section-title-glitch__text {
-  z-index: -1;
+  z-index: -10;
   position: absolute;
   font-size: 3.125rem;
   color: #55565d;
-}
-
-.glitch {
-  color: #55565d;
-  font-size: 50px;
-  position: relative;
-  width: 400px;
-  margin: 0 auto;
-}
-
-@-webkit-keyframes noise-anim {
-  0% {
-    clip: rect(7px, 9999px, 51px, 0);
-  }
-
-  5% {
-    clip: rect(21px, 9999px, 1px, 0);
-  }
-
-  10% {
-    clip: rect(26px, 9999px, 77px, 0);
-  }
-
-  15% {
-    clip: rect(16px, 9999px, 34px, 0);
-  }
-
-  20% {
-    clip: rect(14px, 9999px, 64px, 0);
-  }
-
-  25% {
-    clip: rect(100px, 9999px, 70px, 0);
-  }
-
-  30% {
-    clip: rect(48px, 9999px, 15px, 0);
-  }
-
-  35% {
-    clip: rect(1px, 9999px, 88px, 0);
-  }
-
-  40% {
-    clip: rect(41px, 9999px, 75px, 0);
-  }
-
-  45% {
-    clip: rect(100px, 9999px, 94px, 0);
-  }
-
-  50% {
-    clip: rect(43px, 9999px, 65px, 0);
-  }
-
-  55% {
-    clip: rect(17px, 9999px, 87px, 0);
-  }
-
-  60% {
-    clip: rect(31px, 9999px, 14px, 0);
-  }
-
-  65% {
-    clip: rect(4px, 9999px, 52px, 0);
-  }
-
-  70% {
-    clip: rect(88px, 9999px, 59px, 0);
-  }
-
-  75% {
-    clip: rect(64px, 9999px, 29px, 0);
-  }
-
-  80% {
-    clip: rect(36px, 9999px, 1px, 0);
-  }
-
-  85% {
-    clip: rect(26px, 9999px, 37px, 0);
-  }
-
-  90% {
-    clip: rect(83px, 9999px, 42px, 0);
-  }
-
-  95% {
-    clip: rect(34px, 9999px, 30px, 0);
-  }
-
-  100% {
-    clip: rect(47px, 9999px, 26px, 0);
-  }
-}
-
-@keyframes noise-anim {
-  0% {
-    clip: rect(7px, 9999px, 51px, 0);
-  }
-
-  5% {
-    clip: rect(21px, 9999px, 1px, 0);
-  }
-
-  10% {
-    clip: rect(26px, 9999px, 77px, 0);
-  }
-
-  15% {
-    clip: rect(16px, 9999px, 34px, 0);
-  }
-
-  20% {
-    clip: rect(14px, 9999px, 64px, 0);
-  }
-
-  25% {
-    clip: rect(100px, 9999px, 70px, 0);
-  }
-
-  30% {
-    clip: rect(48px, 9999px, 15px, 0);
-  }
-
-  35% {
-    clip: rect(1px, 9999px, 88px, 0);
-  }
-
-  40% {
-    clip: rect(41px, 9999px, 75px, 0);
-  }
-
-  45% {
-    clip: rect(100px, 9999px, 94px, 0);
-  }
-
-  50% {
-    clip: rect(43px, 9999px, 65px, 0);
-  }
-
-  55% {
-    clip: rect(17px, 9999px, 87px, 0);
-  }
-
-  60% {
-    clip: rect(31px, 9999px, 14px, 0);
-  }
-
-  65% {
-    clip: rect(4px, 9999px, 52px, 0);
-  }
-
-  70% {
-    clip: rect(88px, 9999px, 59px, 0);
-  }
-
-  75% {
-    clip: rect(64px, 9999px, 29px, 0);
-  }
-
-  80% {
-    clip: rect(36px, 9999px, 1px, 0);
-  }
-
-  85% {
-    clip: rect(26px, 9999px, 37px, 0);
-  }
-
-  90% {
-    clip: rect(83px, 9999px, 42px, 0);
-  }
-
-  95% {
-    clip: rect(34px, 9999px, 30px, 0);
-  }
-
-  100% {
-    clip: rect(47px, 9999px, 26px, 0);
-  }
-}
-
-.glitch:after {
-  content: attr(data-text);
-  position: absolute;
-  left: 2px;
-  text-shadow: -1px 0 rgba(255, 0, 0, 0.5);
-  top: 0;
-  color: #55565d;
-  background: #2b2c35;
-  overflow: hidden;
-  clip: rect(0, 900px, 0, 0);
-  animation: noise-anim 4s infinite linear alternate-reverse;
-}
-
-@-webkit-keyframes noise-anim-2 {
-  0% {
-    clip: rect(29px, 9999px, 76px, 0);
-  }
-
-  5% {
-    clip: rect(44px, 9999px, 23px, 0);
-  }
-
-  10% {
-    clip: rect(86px, 9999px, 50px, 0);
-  }
-
-  15% {
-    clip: rect(56px, 9999px, 28px, 0);
-  }
-
-  20% {
-    clip: rect(82px, 9999px, 2px, 0);
-  }
-
-  25% {
-    clip: rect(65px, 9999px, 100px, 0);
-  }
-
-  30% {
-    clip: rect(12px, 9999px, 89px, 0);
-  }
-
-  35% {
-    clip: rect(48px, 9999px, 35px, 0);
-  }
-
-  40% {
-    clip: rect(26px, 9999px, 46px, 0);
-  }
-
-  45% {
-    clip: rect(100px, 9999px, 4px, 0);
-  }
-
-  50% {
-    clip: rect(52px, 9999px, 67px, 0);
-  }
-
-  55% {
-    clip: rect(37px, 9999px, 78px, 0);
-  }
-
-  60% {
-    clip: rect(49px, 9999px, 5px, 0);
-  }
-
-  65% {
-    clip: rect(4px, 9999px, 71px, 0);
-  }
-
-  70% {
-    clip: rect(34px, 9999px, 22px, 0);
-  }
-
-  75% {
-    clip: rect(90px, 9999px, 70px, 0);
-  }
-
-  80% {
-    clip: rect(77px, 9999px, 100px, 0);
-  }
-
-  85% {
-    clip: rect(59px, 9999px, 92px, 0);
-  }
-
-  90% {
-    clip: rect(75px, 9999px, 93px, 0);
-  }
-
-  95% {
-    clip: rect(50px, 9999px, 23px, 0);
-  }
-
-  100% {
-    clip: rect(40px, 9999px, 9px, 0);
-  }
-}
-
-@keyframes noise-anim-2 {
-  0% {
-    clip: rect(29px, 9999px, 76px, 0);
-  }
-
-  5% {
-    clip: rect(44px, 9999px, 23px, 0);
-  }
-
-  10% {
-    clip: rect(86px, 9999px, 50px, 0);
-  }
-
-  15% {
-    clip: rect(56px, 9999px, 28px, 0);
-  }
-
-  20% {
-    clip: rect(82px, 9999px, 2px, 0);
-  }
-
-  25% {
-    clip: rect(65px, 9999px, 100px, 0);
-  }
-
-  30% {
-    clip: rect(12px, 9999px, 89px, 0);
-  }
-
-  35% {
-    clip: rect(48px, 9999px, 35px, 0);
-  }
-
-  40% {
-    clip: rect(26px, 9999px, 46px, 0);
-  }
-
-  45% {
-    clip: rect(100px, 9999px, 4px, 0);
-  }
-
-  50% {
-    clip: rect(52px, 9999px, 67px, 0);
-  }
-
-  55% {
-    clip: rect(37px, 9999px, 78px, 0);
-  }
-
-  60% {
-    clip: rect(49px, 9999px, 5px, 0);
-  }
-
-  65% {
-    clip: rect(4px, 9999px, 71px, 0);
-  }
-
-  70% {
-    clip: rect(34px, 9999px, 22px, 0);
-  }
-
-  75% {
-    clip: rect(90px, 9999px, 70px, 0);
-  }
-
-  80% {
-    clip: rect(77px, 9999px, 100px, 0);
-  }
-
-  85% {
-    clip: rect(59px, 9999px, 92px, 0);
-  }
-
-  90% {
-    clip: rect(75px, 9999px, 93px, 0);
-  }
-
-  95% {
-    clip: rect(50px, 9999px, 23px, 0);
-  }
-
-  100% {
-    clip: rect(40px, 9999px, 9px, 0);
-  }
-}
-
-.glitch:before {
-  content: attr(data-text);
-  position: absolute;
-  left: -2px;
-  text-shadow: 1px 0 blue;
-  top: 0;
-  color: #55565d;
-  background: #2b2c35;
-  overflow: hidden;
-  clip: rect(0, 900px, 0, 0);
-  animation: noise-anim-2 6s infinite linear alternate-reverse;
 }
 
 @media (min-width: 992px) {
@@ -1497,16 +1155,13 @@ h6 {
   }
 
   .right-hero {
-    -webkit-transform: scale(0.75);
-    -ms-transform: scale(0.75);
-    transform: scale(0.75);
+    -webkit-transform: scale(0.7);
+    -ms-transform: scale(0.7);
+    transform: scale(0.7);
   }
 
   .skills__list {
-    margin-bottom: 0;
-    -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
+    width: 24.75rem;
   }
 
   .years-of-experience__number {
@@ -1515,6 +1170,18 @@ h6 {
 
   .years-of-experience__text {
     font-size: 1.875rem;
+  }
+
+  .skill {
+    -webkit-transform: scale(0.9);
+    -ms-transform: scale(0.9);
+    transform: scale(0.9);
+    height: 6.1875rem;
+    width: 6.1875rem;
+  }
+
+  .swiper {
+    min-height: 17.5rem;
   }
 
   .swiper-button-next,
@@ -1551,9 +1218,19 @@ h6 {
   }
 
   .skills__list {
+    width: 20rem;
+  }
+
+  .skill {
     -webkit-transform: scale(0.8);
     -ms-transform: scale(0.8);
     transform: scale(0.8);
+    height: 5rem;
+    width: 5rem;
+  }
+
+  .swiper {
+    min-height: 20rem;
   }
 
   .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {

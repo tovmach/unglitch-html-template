@@ -1,6 +1,6 @@
 /* width */
 ::-webkit-scrollbar {
-  width: 10px;
+  width: rem(10);
 }
 
 /* Track */
@@ -11,10 +11,22 @@
 /* Handle */
 ::-webkit-scrollbar-thumb {
   background: $main-color;
-  border-radius: 2px;
+  border-radius: rem(2);
 }
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
   background: $main-color;
+}
+
+// horizontal scrollbar *used in skills section
+::-webkit-scrollbar:horizontal {
+  height: rem(2);
+}
+::-webkit-scrollbar-thumb:horizontal {
+  background: $main-color;
+  border-radius: 2px;
+}
+::-webkit-scrollbar-track:horizontal {
+  background: $main-bg-color-light;
 }
