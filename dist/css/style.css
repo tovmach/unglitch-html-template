@@ -618,10 +618,11 @@ h6 {
   position: relative;
   overflow: hidden;
   width: 100%;
+  max-height: 23.125rem;
+  border-radius: 0.375rem;
 }
 
 .work__img {
-  border-radius: 0.375rem;
   -webkit-transform: scale(1);
   -ms-transform: scale(1);
   transform: scale(1);

@@ -40,9 +40,10 @@
     position: relative;
     overflow: hidden;
     width: 100%;
+    max-height: rem(370);
+    border-radius: rem(6);
   }
   &__img {
-    border-radius: rem(6);
     transform: scale(1);
     transition: transform 0.5s ease-in-out;
   }
