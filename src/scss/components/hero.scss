@@ -56,13 +56,18 @@
     height: rem(110);
     width: rem(110);
     border-radius: 50%;
+    margin-left: rem(3);
+    margin-right: rem(3);
   }
   &__icon-circular-text {
     font-size: rem(11);
   }
   &__icon {
-    font-size: rem(40);
+    height: rem(57);
     position: absolute;
+    &_small {
+      height: rem(48);
+    }
   }
 }
 
@@ -72,8 +77,8 @@
   justify-content: center;
   align-items: center;
   position: relative;
-  @media (max-width: $sm-575px) {
-    height: rem(350);
+  @media (max-width: $md-767px) {
+    height: rem(300);
   }
   @media (max-width: $lg-991px) {
     height: rem(350);
@@ -89,7 +94,7 @@
   &__person {
     position: absolute;
     z-index: -1;
-    width: rem(266);
+    width: rem(272);
   }
   //small wings
   &__wings {

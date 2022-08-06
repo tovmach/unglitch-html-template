@@ -40,7 +40,6 @@
     position: relative;
     overflow: hidden;
     width: 100%;
-    max-height: rem(370);
     border-radius: rem(6);
   }
   &__img {
@@ -88,9 +87,12 @@
     gap: rem(15);
   }
   &__title {
-    font-size: rem(35);
+    font-size: rem(32);
     font-weight: bold;
     line-height: 0.8;
+    @media (max-width: $sm-575px) {
+      font-size: rem(25);
+    }
   }
   &__button {
     border: rgba(255, 255, 255, 0.7) rem(2) solid;
