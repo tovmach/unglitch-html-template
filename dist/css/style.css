@@ -203,6 +203,7 @@ h6 {
 .left-hero__title {
   text-align: center;
   font-size: 4.375rem;
+  white-space: nowrap;
 }
 
 .left-hero__text {

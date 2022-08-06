@@ -17,6 +17,7 @@
   &__title {
     text-align: center;
     font-size: rem(70);
+    white-space: nowrap;
 
     @media (max-width: $lg-991px) {
       font-size: rem(60);
