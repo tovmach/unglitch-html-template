@@ -60,6 +60,7 @@ $lg-991px: 991px;
   font-family: Invasible;
   src: url('../fonts/invasible-invasible-regular-400.ttf') format('opentype');
 }
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 // tags
 html {
@@ -68,6 +69,8 @@ html {
 }
 body {
   background-color: $main-bg-color;
+  font-family: 'Roboto', sans-serif;
+
   height: 100vh;
   display: flex;
   flex-direction: column;

@@ -28,51 +28,15 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Corporis consequatur.
                 </div>
-                <div class="overlay__button js-link">
-                  <!-- <div
+
+                <!-- Button trigger modal -->
+                <div
                   class="overlay__button js-link"
                   data-bs-toggle="modal"
                   data-bs-target="#exampleModal"
-                > -->
+                >
                   Case Study <i class="fa-solid fa-angle-right"></i>
                 </div>
-                <!-- Modal -->
-                <!-- <div
-                  class="modal fade"
-                  id="exampleModal"
-                  tabindex="-1"
-                  aria-labelledby="exampleModalLabel"
-                  aria-hidden="true"
-                >
-                  <div class="modal-dialog">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLabel">
-                          Modal title
-                        </h5>
-                        <button
-                          type="button"
-                          class="btn-close"
-                          data-bs-dismiss="modal"
-                          aria-label="Close"
-                        ></button>
-                      </div>
-                      <div class="modal-body">...</div>
-                      <div class="modal-footer">
-                        <button
-                          type="button"
-                          class="btn btn-secondary"
-                          data-bs-dismiss="modal"
-                        >
-                          Close
-                        </button>
-                        <button type="button" class="btn btn-primary">
-                          Save changes
-                        </button>
-                      </div>
-                    </div>
-                  </div>
-                </div> -->
               </div>
             </div>
             <div class="work__overlay-movement"></div>
@@ -100,7 +64,11 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Corporis consequatur.
                 </div>
-                <div class="overlay__button js-link">
+                <div
+                  class="overlay__button js-link"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
                   Case Study <i class="fa-solid fa-angle-right"></i>
                 </div>
               </div>
@@ -130,7 +98,11 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Corporis consequatur.
                 </div>
-                <div class="overlay__button js-link">
+                <div
+                  class="overlay__button js-link"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
                   Case Study <i class="fa-solid fa-angle-right"></i>
                 </div>
               </div>
@@ -160,7 +132,11 @@
                   Lorem ipsum dolor sit amet consectetur adipisicing elit.
                   Corporis consequatur.
                 </div>
-                <div class="overlay__button js-link">
+                <div
+                  class="overlay__button js-link"
+                  data-bs-toggle="modal"
+                  data-bs-target="#exampleModal"
+                >
                   Case Study <i class="fa-solid fa-angle-right"></i>
                 </div>
               </div>
@@ -172,3 +148,76 @@
     </div>
   </div>
 </section>
+
+<!-- Modal -->
+<div
+  class="modal fade"
+  id="exampleModal"
+  tabindex="-1"
+  aria-labelledby="exampleModalLabel"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-scrollable modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <div class="modal-title" id="exampleModalLabel">Project Title</div>
+        <button
+          type="button"
+          class="btn-close btn-close-white"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body">
+        <img
+          class="img-fluid"
+          src="@img/photos/portfolio-1.jpg"
+          alt="real estate app"
+        />
+        <div class="portfolio-modal__container">
+          <div class="portfolio-modal__title">Technology Stack:</div>
+          <ul class="portfolio-modal__list">
+            <li class="portfolio-modal__element">React</li>
+            <li class="portfolio-modal__element">Next.js</li>
+            <li class="portfolio-modal__element">NextAuth</li>
+            <li class="portfolio-modal__element">MUI5</li>
+            <li class="portfolio-modal__element">MongoDB</li>
+            <li class="portfolio-modal__element">Localstorage</li>
+            <li class="portfolio-modal__element">Cloudinary</li>
+            <li class="portfolio-modal__element">Telegram API</li>
+            <li class="portfolio-modal__element">Google-spreadsheet API</li>
+          </ul>
+          <div class="mt-2 portfolio-modal__title">Description:</div>
+          <p>
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+            ipsam dolore amet, distinctio officia quasi commodi, voluptate
+            quibusdam iure porro beatae autem odit modi velit quisquam deleniti
+            fugit voluptatum tenetur!
+          </p>
+          <img
+            class="img-fluid"
+            src="@img/photos/wireframe.jpg"
+            alt="real estate app"
+          />
+          <p class="mt-2">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Temporibus
+            ipsam dolore amet, distinctio officia quasi commodi, voluptate
+            quibusdam iure porro beatae autem odit modi velit quisquam deleniti
+            fugit voluptatum tenetur!
+          </p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <a class="modal-icon">
+          <i class="fa-brands fa-figma"></i>
+        </a>
+        <a class="modal-icon">
+          <i class="fa-solid fa-link"></i>
+        </a>
+        <a class="modal-icon">
+          <i class="fa-brands fa-github-alt"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>

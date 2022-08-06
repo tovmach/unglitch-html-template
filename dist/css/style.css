@@ -43,6 +43,9 @@
 
 /* ************************ */
 
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;
+
+700&display=swap");
 @font-face {
   font-family: Invasible;
   src: url("../fonts/invasible-invasible-regular-400.ttf") format("opentype");
@@ -55,6 +58,7 @@ html {
 
 body {
   background-color: #2b2c35;
+  font-family: "Roboto", sans-serif;
   height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -566,6 +570,7 @@ h6 {
 
 .service__title {
   font-size: 1.875rem;
+  font-weight: bold;
 }
 
 .service__link {
@@ -735,8 +740,67 @@ h6 {
   margin-left: 0.625rem;
 }
 
-.modal {
-  z-index: 1500;
+.modal-content {
+  background-color: #2b2c35;
+}
+
+.modal-icon {
+  margin-left: 0.625rem;
+  margin-right: 0.625rem;
+  font-size: 1.25rem;
+  color: #2b2c35;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 2.1875rem;
+  height: 2.1875rem;
+  background-color: white;
+  border-radius: 50%;
+  -webkit-transition: background-color 0.3s ease-in-out;
+  -o-transition: background-color 0.3s ease-in-out;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.modal-icon:hover {
+  color: #2b2c35;
+  background-color: #01ffff;
+}
+
+.portfolio-modal__container {
+  padding: 1rem;
+}
+
+.portfolio-modal__title {
+  font-size: 1.25rem;
+  font-weight: bold;
+}
+
+.portfolio-modal__list {
+  list-style: none;
+  padding-left: 0.9375rem;
+  margin: 0;
+}
+
+.portfolio-modal__element {
+  position: relative;
+  padding-left: 0.9375rem;
+}
+
+.portfolio-modal__element:before {
+  color: #01ffff;
+  content: "▹";
+  position: absolute;
+  left: 0px;
+}
+
+.modal-body {
+  padding: 0;
 }
 
 /* **************************** */
