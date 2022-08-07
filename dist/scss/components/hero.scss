@@ -91,6 +91,7 @@
     font-size: rem(35);
     bottom: rem(-160);
     left: rem(80);
+    user-select: none;
   }
   &__person {
     position: absolute;

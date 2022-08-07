@@ -1,0 +1,19 @@
+.preloader {
+  position: fixed;
+  height: 110vh;
+  width: 100vw;
+  top: -56px;
+  overflow: hidden;
+  background-color: $main-bg-color;
+  z-index: 1600;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &__text {
+    font-size: rem(40);
+    font-weight: bold;
+  }
+}
+.typed-cursor {
+  font-size: rem(40);
+}

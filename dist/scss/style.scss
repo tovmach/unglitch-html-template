@@ -70,7 +70,6 @@ html {
 body {
   background-color: $main-bg-color;
   font-family: 'Roboto', sans-serif;
-
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -110,6 +109,10 @@ h6 {
     max-width: rem(1200);
   }
 }
+/* **************** */
+/*    Preloader     */
+/* **************** */
+@import 'components/preloader';
 
 /* **************************** */
 /*          Navigation          */
@@ -155,9 +158,9 @@ h6 {
 /* ******************** */
 @import 'components/testimonial';
 
-/* ******************** */
+/* **************** */
 /*     Contact      */
-/* ******************** */
+/* **************** */
 @import 'components/contact';
 
 /* ******************** */
@@ -225,54 +228,6 @@ h6 {
     position: absolute;
     font-size: rem(50);
     color: $text-gray;
+    user-select: none;
   }
 }
-
-// .glitch {
-//   color: $text-gray;
-//   font-size: 50px;
-//   position: relative;
-//   width: 400px;
-//   margin: 0 auto;
-// }
-// @keyframes noise-anim {
-//   $steps: 20;
-//   @for $i from 0 through $steps {
-//     #{percentage($i*(1/$steps))} {
-//       clip: rect(random(100) + px, 9999px, random(100) + px, 0);
-//     }
-//   }
-// }
-// .glitch:after {
-//   content: attr(data-text);
-//   position: absolute;
-//   left: 2px;
-//   text-shadow: -1px 0 rgba($color: red, $alpha: 0.5);
-//   top: 0;
-//   color: $text-gray;
-//   background: $main-bg-color;
-//   overflow: hidden;
-//   clip: rect(0, 900px, 0, 0);
-//   animation: noise-anim 4s infinite linear alternate-reverse;
-// }
-
-// @keyframes noise-anim-2 {
-//   $steps: 20;
-//   @for $i from 0 through $steps {
-//     #{percentage($i*(1/$steps))} {
-//       clip: rect(random(100) + px, 9999px, random(100) + px, 0);
-//     }
-//   }
-// }
-// .glitch:before {
-//   content: attr(data-text);
-//   position: absolute;
-//   left: -2px;
-//   text-shadow: 1px 0 blue;
-//   top: 0;
-//   color: $text-gray;
-//   background: $main-bg-color;
-//   overflow: hidden;
-//   clip: rect(0, 900px, 0, 0);
-//   animation: noise-anim-2 6s infinite linear alternate-reverse;
-// }

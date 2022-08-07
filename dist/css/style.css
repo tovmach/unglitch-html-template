@@ -106,6 +106,40 @@ h6 {
   margin-top: 0.3125rem;
 }
 
+/* **************** */
+
+/*    Preloader     */
+
+/* **************** */
+
+.preloader {
+  position: fixed;
+  height: 110vh;
+  width: 100vw;
+  top: -56px;
+  overflow: hidden;
+  background-color: #2b2c35;
+  z-index: 1600;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.preloader__text {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.typed-cursor {
+  font-size: 2.5rem;
+}
+
 /* **************************** */
 
 /*          Navigation          */
@@ -286,6 +320,10 @@ h6 {
   font-size: 2.1875rem;
   bottom: -10rem;
   left: 5rem;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 .right-hero__person {
@@ -904,11 +942,11 @@ h6 {
   background-color: #01ffff;
 }
 
-/* ******************** */
+/* **************** */
 
 /*     Contact      */
 
-/* ******************** */
+/* **************** */
 
 .contact {
   position: relative;
@@ -1083,6 +1121,10 @@ h6 {
   position: absolute;
   font-size: 3.125rem;
   color: #55565d;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 }
 
 @media (min-width: 992px) {

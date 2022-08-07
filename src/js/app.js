@@ -21,6 +21,7 @@
 /*     1. Onload    */
 /********************/
 window.onload = () => {
+  unglitch_preloader()
   unglitch_navigation()
   unglitch_skills_tabs_change_years()
   unglitch_testimonial_swiper()
@@ -213,6 +214,26 @@ const unglitch_circular_text = () => {
     new CircleType(item)
   }
 }
+/*******************************/
+/*        8. Preloader         */
+/*******************************/
+const unglitch_preloader = () => {
+  document.body.style.overflow = 'hidden'
+
+  //typed.js
+  var options = {
+    strings: ['loading...'],
+    typeSpeed: 80
+  }
+
+  new Typed('.preloader__text', options)
+
+  const preloader = document.querySelector('.preloader')
+  setTimeout(() => {
+    preloader.remove()
+    document.body.style.overflow = 'visible'
+  }, 1500)
+}
 /******************************/
 /*           Glitch           */
 /******************************/
@@ -224,13 +245,13 @@ for (const glitch of glitchList) {
 }
 
 //js library Glitched Writer
-// const left__hero__title = document.querySelector('.left-hero__title')
-// const text = left__hero__title.textContent
-// left__hero__title.textContent = 'X'
+const left__hero__title = document.querySelector('.glitched-writer')
+const text = left__hero__title.textContent
+left__hero__title.textContent = 'X'
 
-// const writer = GlitchedWriter.create(left__hero__title, {
-//   maxGhosts: 0.1,
-//   ghostChance: 0.1
-// })
+const writer = GlitchedWriter.create(left__hero__title, {
+  maxGhosts: 0.1,
+  ghostChance: 0.1
+})
 
-// writer.write(text)
+writer.write(text)
