@@ -113,28 +113,14 @@
   }
 }
 
+// Modal
 .modal-content {
   background-color: $main-bg-color;
 }
-
-.modal-icon {
-  margin-left: rem(10);
-  margin-right: rem(10);
-  font-size: rem(20);
-  color: $main-bg-color;
-  justify-content: center;
-  align-items: center;
-  display: flex;
-  width: rem(35);
-  height: rem(35);
-  background-color: white;
-  border-radius: 50%;
-  transition: background-color 0.3s ease-in-out;
-  &:hover {
-    color: $main-bg-color;
-    background-color: $main-color;
-  }
+.modal-body {
+  padding: 0;
 }
+
 .portfolio-modal {
   &__container {
     padding: rem(16);
@@ -158,8 +144,22 @@
     position: absolute;
     left: 0px;
   }
-}
-
-.modal-body {
-  padding: 0;
+  &__icon {
+    margin-left: rem(10);
+    margin-right: rem(10);
+    font-size: rem(20);
+    color: $main-bg-color;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    width: rem(35);
+    height: rem(35);
+    background-color: white;
+    border-radius: 50%;
+    transition: background-color 0.3s ease-in-out;
+    &:hover {
+      color: $main-bg-color;
+      background-color: $main-color;
+    }
+  }
 }
