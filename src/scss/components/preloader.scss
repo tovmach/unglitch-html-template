@@ -9,6 +9,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  //   &__container {
+  //     position: relative;
+  //     width: 250px;
+  //   }
   &__text {
     font-size: rem(40);
     font-weight: bold;

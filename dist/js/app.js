@@ -10,6 +10,7 @@
     5. Back To Top Button
     6. Custom Cursor
     7. Circular Text 
+    8. Preloader 
 
 
  =================================*/
@@ -21,13 +22,14 @@
 /*     1. Onload    */
 /********************/
 window.onload = () => {
-  unglitch_preloader()
+  //unglitch_preloader()
   unglitch_navigation()
   unglitch_skills_tabs_change_years()
   unglitch_testimonial_swiper()
   unglitch_back_to_top_button()
   unglitch_cutom_cursor()
   unglitch_circular_text()
+  unglitch_form()
 }
 
 /********************************/
@@ -217,22 +219,55 @@ const unglitch_circular_text = () => {
 /*******************************/
 /*        8. Preloader         */
 /*******************************/
-const unglitch_preloader = () => {
-  document.body.style.overflow = 'hidden'
+// const unglitch_preloader = () => {
+//   document.body.style.overflow = 'hidden'
 
-  //typed.js
-  var options = {
-    strings: ['loading...'],
-    typeSpeed: 80
-  }
+//   //typed.js
+//   var options = {
+//     strings: ['loading...'],
+//     typeSpeed: 80
+//   }
 
-  new Typed('.preloader__text', options)
+//   new Typed('.preloader__text', options)
 
-  const preloader = document.querySelector('.preloader')
-  setTimeout(() => {
-    preloader.remove()
-    document.body.style.overflow = 'visible'
-  }, 1500)
+//   const preloader = document.querySelector('.preloader')
+//   setTimeout(() => {
+//     preloader.remove()
+//     document.body.style.overflow = 'visible'
+//   }, 1500)
+// }
+/******************************/
+/*           Form            */
+/******************************/
+const unglitch_form = () => {
+  const form = document.querySelector('.contact__form')
+  const form_button = document.querySelector('.form-button')
+  const form_message = document.querySelector('.form-message')
+  const form_email = document.querySelector('.form-email')
+  const form_name = document.querySelector('.form-name')
+  const contact_alert = document.querySelector('.contact__alert')
+  const close_alert = document.querySelector('.close-alert')
+
+  form_button.addEventListener('click', (e) => {
+    e.preventDefault()
+    form.classList.add('was-validated')
+    if (form.checkValidity()) {
+      form_name.value = ''
+      form_email.value = ''
+      form_message.value = ''
+      form.classList.remove('was-validated')
+      contact_alert.classList.add('show-alert')
+      setTimeout(() => {
+        contact_alert.classList.remove('show-alert')
+      }, 4000)
+    } else {
+      e.stopPropagation()
+    }
+  })
+
+  close_alert.addEventListener('click', () => {
+    contact_alert.classList.remove('show-alert')
+  })
 }
 /******************************/
 /*           Glitch           */

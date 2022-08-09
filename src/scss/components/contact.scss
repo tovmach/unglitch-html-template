@@ -11,6 +11,35 @@
     z-index: -1;
     margin-left: auto;
   }
+  &__alert {
+    z-index: 100;
+    color: rgb(30, 70, 32);
+    background-color: rgb(237, 247, 237);
+    position: fixed;
+    bottom: 0;
+    left: rem(20);
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.3s ease-out;
+    @media (max-width: $md-767px) {
+      white-space: nowrap;
+      left: 50%;
+      transform: translateX(-50%) translateY(20px);
+    }
+  }
+  &__alert.show-alert {
+    transform: translateY(0);
+    visibility: visible;
+    opacity: 1;
+    @media (max-width: $md-767px) {
+      transform: translateX(-50%) translateY(0);
+    }
+  }
+}
+.close-alert {
+  cursor: pointer;
+  padding: rem(5);
 }
 
 .form-control {

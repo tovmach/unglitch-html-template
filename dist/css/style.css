@@ -393,6 +393,7 @@ h6 {
 }
 
 .about__icon {
+  cursor: pointer;
   margin-left: 0.9375rem;
   margin-right: 0.9375rem;
   font-size: 1.25rem;
@@ -814,6 +815,7 @@ h6 {
 }
 
 .portfolio-modal__icon {
+  cursor: pointer;
   margin-left: 0.625rem;
   margin-right: 0.625rem;
   font-size: 1.25rem;
@@ -962,6 +964,36 @@ h6 {
   height: 95%;
   z-index: -1;
   margin-left: auto;
+}
+
+.contact__alert {
+  z-index: 100;
+  color: rgb(30, 70, 32);
+  background-color: rgb(237, 247, 237);
+  position: fixed;
+  bottom: 0;
+  left: 1.25rem;
+  visibility: hidden;
+  opacity: 0;
+  -webkit-transform: translateY(20px);
+  -ms-transform: translateY(20px);
+  transform: translateY(20px);
+  -webkit-transition: 0.3s ease-out;
+  -o-transition: 0.3s ease-out;
+  transition: 0.3s ease-out;
+}
+
+.contact__alert.show-alert {
+  -webkit-transform: translateY(0);
+  -ms-transform: translateY(0);
+  transform: translateY(0);
+  visibility: visible;
+  opacity: 1;
+}
+
+.close-alert {
+  cursor: pointer;
+  padding: 0.3125rem;
 }
 
 .form-control {
@@ -1318,6 +1350,20 @@ h6 {
     -webkit-box-pack: center;
     -ms-flex-pack: center;
     justify-content: center;
+  }
+
+  .contact__alert {
+    white-space: nowrap;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(20px);
+    -ms-transform: translateX(-50%) translateY(20px);
+    transform: translateX(-50%) translateY(20px);
+  }
+
+  .contact__alert.show-alert {
+    -webkit-transform: translateX(-50%) translateY(0);
+    -ms-transform: translateX(-50%) translateY(0);
+    transform: translateX(-50%) translateY(0);
   }
 }
 

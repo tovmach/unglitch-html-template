@@ -5,16 +5,22 @@
       <div class="section-title-glitch__text">世界をハッ</div>
     </div>
     <div class="contact">
-      <form autocomplete="off" method="post" class="form" action="#">
+      <form
+        autocomplete="off"
+        method="post"
+        class="form contact__form"
+        action="#"
+      >
         <div class="row">
           <div class="col-12 col-md-6">
             <div class="form-floating mb-3">
               <input
                 autocomplete="off"
                 type="Name"
-                class="form-control"
+                class="form-control form-name"
                 id="floatingInput"
                 placeholder="Javier Black"
+                required
               />
               <label for="floatingInput">Name</label>
             </div>
@@ -24,9 +30,10 @@
               <input
                 autocomplete="off"
                 type="email"
-                class="form-control"
+                class="form-control form-email"
                 id="floatingInput"
                 placeholder="name@example.com"
+                required
               />
               <label for="floatingInput">Email</label>
             </div>
@@ -34,11 +41,12 @@
         </div>
         <div class="form-floating">
           <textarea
-            class="form-textarea form-control"
+            class="form-textarea form-control form-message"
             placeholder="Leave a comment here"
             id="floatingTextarea2"
+            required
           ></textarea>
-          <label for="floatingTextarea2">Comments</label>
+          <label for="floatingTextarea2">Message</label>
         </div>
         <button class="form-button" type="submit">
           Send <i class="fa-solid fa-paper-plane"></i>
@@ -50,5 +58,10 @@
         alt="ribs"
       />
     </div>
+  </div>
+  <!-- success alert -->
+  <div class="alert alert-success contact__alert" role="alert">
+    <i class="fa-solid fa-circle-check"></i> Your message has been received!
+    <i class="fa-solid fa-xmark close-alert js-link fa-lg"></i>
   </div>
 </section>
