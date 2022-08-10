@@ -10,7 +10,8 @@
     5. Back To Top Button
     6. Custom Cursor
     7. Circular Text 
-    8. Preloader 
+    8. Form
+    9. Glitch Section Name Text
 
 
  =================================*/
@@ -22,7 +23,6 @@
 /*     1. Onload    */
 /********************/
 window.onload = () => {
-  //unglitch_preloader()
   unglitch_navigation()
   unglitch_skills_tabs_change_years()
   unglitch_testimonial_swiper()
@@ -30,6 +30,7 @@ window.onload = () => {
   unglitch_cutom_cursor()
   unglitch_circular_text()
   unglitch_form()
+  unglitch_glitch()
 }
 
 /********************************/
@@ -89,15 +90,17 @@ const unglitch_skills_tabs_change_years = () => {
   )
   const skills = document.querySelectorAll('.skill')
 
-  const firstSkillYears = skills[0].dataset.years
-  yearsOfExperience.textContent = firstSkillYears
+  if (skills && yearsOfExperience) {
+    const firstSkillYears = skills[0].dataset.years
+    yearsOfExperience.textContent = firstSkillYears
 
-  for (const skill of skills) {
-    skill.addEventListener('click', () => {
-      const years = skill.dataset.years
+    for (const skill of skills) {
+      skill.addEventListener('click', () => {
+        const years = skill.dataset.years
 
-      yearsOfExperience.textContent = years
-    })
+        yearsOfExperience.textContent = years
+      })
+    }
   }
 }
 
@@ -212,33 +215,15 @@ function unglitch_cutom_cursor() {
 /*********************************/
 const unglitch_circular_text = () => {
   const list = document.querySelectorAll('.circular-text')
-  for (const item of list) {
-    new CircleType(item)
+  if (list) {
+    for (const item of list) {
+      new CircleType(item)
+    }
   }
 }
 /*******************************/
-/*        8. Preloader         */
+/*          8. Form            */
 /*******************************/
-// const unglitch_preloader = () => {
-//   document.body.style.overflow = 'hidden'
-
-//   //typed.js
-//   var options = {
-//     strings: ['loading...'],
-//     typeSpeed: 80
-//   }
-
-//   new Typed('.preloader__text', options)
-
-//   const preloader = document.querySelector('.preloader')
-//   setTimeout(() => {
-//     preloader.remove()
-//     document.body.style.overflow = 'visible'
-//   }, 1500)
-// }
-/******************************/
-/*           Form            */
-/******************************/
 const unglitch_form = () => {
   const form = document.querySelector('.contact__form')
   const form_button = document.querySelector('.form-button')
@@ -247,46 +232,47 @@ const unglitch_form = () => {
   const form_name = document.querySelector('.form-name')
   const contact_alert = document.querySelector('.contact__alert')
   const close_alert = document.querySelector('.close-alert')
+  const contact_data = {}
+  if (form) {
+    form_button.addEventListener('click', (e) => {
+      e.preventDefault()
+      form.classList.add('was-validated')
+      if (form.checkValidity()) {
+        // console log the contact_data object
+        contact_data.name = form_name.value
+        contact_data.email = form_email.value
+        contact_data.message = form_message.value
+        console.log(contact_data)
+        // clean input values
+        form_name.value = ''
+        form_email.value = ''
+        form_message.value = ''
+        form.classList.remove('was-validated')
+        // show alert
+        contact_alert.classList.add('show-alert')
+        setTimeout(() => {
+          contact_alert.classList.remove('show-alert')
+        }, 4000)
+      } else {
+        e.stopPropagation()
+      }
+    })
 
-  form_button.addEventListener('click', (e) => {
-    e.preventDefault()
-    form.classList.add('was-validated')
-    if (form.checkValidity()) {
-      form_name.value = ''
-      form_email.value = ''
-      form_message.value = ''
-      form.classList.remove('was-validated')
-      contact_alert.classList.add('show-alert')
-      setTimeout(() => {
-        contact_alert.classList.remove('show-alert')
-      }, 4000)
-    } else {
-      e.stopPropagation()
+    close_alert.addEventListener('click', () => {
+      contact_alert.classList.remove('show-alert')
+    })
+  }
+}
+/*********************************/
+/*           9. Glitch           */
+/*********************************/
+// Glitch Section Name Text
+// adds the textContent to the dataset so it can be use later in css
+const unglitch_glitch = () => {
+  const glitchList = document.querySelectorAll('.glitch-1')
+  if (glitchList) {
+    for (const glitch of glitchList) {
+      glitch.dataset.glitch = glitch.textContent
     }
-  })
-
-  close_alert.addEventListener('click', () => {
-    contact_alert.classList.remove('show-alert')
-  })
+  }
 }
-/******************************/
-/*           Glitch           */
-/******************************/
-
-const glitchList = document.querySelectorAll('[class*="glitch"]')
-
-for (const glitch of glitchList) {
-  glitch.dataset.glitch = glitch.textContent
-}
-
-//js library Glitched Writer
-const left__hero__title = document.querySelector('.glitched-writer')
-const text = left__hero__title.textContent
-left__hero__title.textContent = 'X'
-
-const writer = GlitchedWriter.create(left__hero__title, {
-  maxGhosts: 0.1,
-  ghostChance: 0.1
-})
-
-writer.write(text)

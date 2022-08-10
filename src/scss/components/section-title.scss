@@ -1,0 +1,36 @@
+.glitch-1 {
+  position: relative;
+  &:before,
+  &:after {
+    content: attr(data-glitch);
+    position: absolute;
+  }
+  &:after {
+    color: #01ffff;
+    z-index: -1;
+    left: 2px;
+  }
+  &:before {
+    color: #ff00fe;
+    z-index: -2;
+    left: -2px;
+  }
+}
+
+.section-title-glitch {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: rem(25);
+  &__title {
+    font-size: rem(40);
+  }
+  &__text {
+    z-index: -10;
+    position: absolute;
+    font-size: rem(50);
+    color: $text-gray;
+    user-select: none;
+  }
+}

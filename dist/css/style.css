@@ -4,7 +4,6 @@
 
 /*
     Template Name: unglitch - Responsive Bootstrap 5 One Page Portfolio Template
-    Template URI: *****
     Description: Responsive Bootstrap 5 One Page Portfolio Template
     Author: Michael Tovmach
     Author URI: https://www.tovmach.com/
@@ -14,34 +13,42 @@
 /*=================================
    CSS INDEX
 ===================================
-    1. Default CSS
-    2. Header CSS
-    3. Hero CSS
-    4. About CSS
-    5. Portfolio CSS
-    6. Blog CSS
-    7. Contact CSS
-    8. Footer CSS
+    1. Function 
+    2. Variables  
+    3. General Styles 
+    4. Navigation
+    5. Hero 
+    6. About 
+    7. Skills
+    8. Services
+    9. Experience 
+    10. Porfolio
+    11. Testimonial
+    12. Contact 
+    13. Back To Top Button
+    14. Custom Cursor
+    15. Scrollbar
+    16. Glitch Section Title
 
  =================================*/
 
-/* ************************ */
+/* **************************** */
 
-/*         Function         */
+/*      1. Function             */
 
-/* ************************ */
+/* **************************** */
 
-/* ************************ */
+/* **************************** */
 
-/*        Variables         */
+/*      2. Variables            */
 
-/* ************************ */
+/* **************************** */
 
-/* ************************ */
+/* **************************** */
 
-/*      General Styles      */
+/*      3. General Styles       */
 
-/* ************************ */
+/* **************************** */
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;
 
@@ -65,23 +72,23 @@ body {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   color: #fff;
   padding-top: 3.5rem;
 }
 
 main {
   -webkit-box-flex: 1;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 3.125rem;
 }
 
@@ -106,43 +113,9 @@ h6 {
   margin-top: 0.3125rem;
 }
 
-/* **************** */
-
-/*    Preloader     */
-
-/* **************** */
-
-.preloader {
-  position: fixed;
-  height: 110vh;
-  width: 100vw;
-  top: -56px;
-  overflow: hidden;
-  background-color: #2b2c35;
-  z-index: 1600;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-
-.preloader__text {
-  font-size: 2.5rem;
-  font-weight: bold;
-}
-
-.typed-cursor {
-  font-size: 2.5rem;
-}
-
 /* **************************** */
 
-/*          Navigation          */
+/*      4. Navigation           */
 
 /* **************************** */
 
@@ -173,29 +146,27 @@ h6 {
 /* Main Nav Scroll Active */
 
 .navbar-scrolled {
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
-    rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px,
-    rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
 }
 
 .navbar-scrolled-down {
   -webkit-transform: translateY(-100%);
-  -ms-transform: translateY(-100%);
-  transform: translateY(-100%);
+      -ms-transform: translateY(-100%);
+          transform: translateY(-100%);
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;
   -o-transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out;
   transition: transform 0.3s ease-in-out, -webkit-transform 0.3s ease-in-out;
   -webkit-box-shadow: none;
-  box-shadow: none;
+          box-shadow: none;
 }
 
 .navbar-scrolled-up {
   -webkit-transform: none;
-  -ms-transform: none;
-  transform: none;
+      -ms-transform: none;
+          transform: none;
   -webkit-transition: -webkit-transform 0.3s ease-in-out;
   transition: -webkit-transform 0.3s ease-in-out;
   -o-transition: transform 0.3s ease-in-out;
@@ -211,7 +182,7 @@ h6 {
 
 /* **************************** */
 
-/*             Hero             */
+/*      5. Hero                 */
 
 /* **************************** */
 
@@ -227,14 +198,14 @@ h6 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 0.9375rem;
 }
 
@@ -264,8 +235,8 @@ h6 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   padding: 0;
 }
 
@@ -275,11 +246,11 @@ h6 {
   display: flex;
   position: relative;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 6.875rem;
   width: 6.875rem;
   border-radius: 50%;
@@ -306,11 +277,11 @@ h6 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
@@ -321,9 +292,9 @@ h6 {
   bottom: -10rem;
   left: 5rem;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 .right-hero__person {
@@ -347,7 +318,7 @@ h6 {
 
 /* **************************** */
 
-/*              About           */
+/*      6. About                */
 
 /* **************************** */
 
@@ -358,11 +329,11 @@ h6 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   position: relative;
 }
 
@@ -386,8 +357,8 @@ h6 {
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-size: 1.875rem;
   margin-top: 2.1875rem;
 }
@@ -399,11 +370,11 @@ h6 {
   font-size: 1.25rem;
   color: #2b2c35;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -423,7 +394,7 @@ h6 {
 
 /* **************************** */
 
-/*              Skills           */
+/*      7. Skills               */
 
 /* **************************** */
 
@@ -460,14 +431,14 @@ h6 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 100%;
 }
 
@@ -489,11 +460,11 @@ h6 {
   display: flex;
   position: relative;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 6.875rem;
   width: 6.875rem;
   border-radius: 50%;
@@ -514,7 +485,45 @@ h6 {
 
 /* **************************** */
 
-/*              Experience           */
+/*      8. Services             */
+
+/* **************************** */
+
+.service {
+  border: #01ffff solid 0.3125rem;
+  border-radius: 0.625rem;
+  padding: 1.25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 0.625rem;
+  height: 100%;
+}
+
+.service__icon {
+  height: 6.25rem;
+}
+
+.service__title {
+  font-size: 1.875rem;
+  font-weight: bold;
+}
+
+.service__link {
+  margin-right: auto;
+  margin-top: auto;
+}
+
+/* **************************** */
+
+/*      9. Experience           */
 
 /* **************************** */
 
@@ -524,11 +533,11 @@ h6 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   list-style-type: none;
   /* Remove bullets */
   padding: 1.25rem;
@@ -581,45 +590,7 @@ h6 {
 
 /* **************************** */
 
-/*            Services          */
-
-/* **************************** */
-
-.service {
-  border: #01ffff solid 0.3125rem;
-  border-radius: 0.625rem;
-  padding: 1.25rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-  gap: 0.625rem;
-  height: 100%;
-}
-
-.service__icon {
-  height: 6.25rem;
-}
-
-.service__title {
-  font-size: 1.875rem;
-  font-weight: bold;
-}
-
-.service__link {
-  margin-right: auto;
-  margin-top: auto;
-}
-
-/* **************************** */
-
-/*            porfolio          */
+/*      10. Porfolio            */
 
 /* **************************** */
 
@@ -635,8 +606,8 @@ h6 {
   top: 0;
   right: 0;
   -webkit-transform: translate(24%, -30%);
-  -ms-transform: translate(24%, -30%);
-  transform: translate(24%, -30%);
+      -ms-transform: translate(24%, -30%);
+          transform: translate(24%, -30%);
 }
 
 .work__number {
@@ -674,8 +645,8 @@ h6 {
 
 .work__img {
   -webkit-transform: scale(1);
-  -ms-transform: scale(1);
-  transform: scale(1);
+      -ms-transform: scale(1);
+          transform: scale(1);
   -webkit-transition: -webkit-transform 0.5s ease-in-out;
   transition: -webkit-transform 0.5s ease-in-out;
   -o-transition: transform 0.5s ease-in-out;
@@ -685,8 +656,8 @@ h6 {
 
 .work:hover .work__img {
   -webkit-transform: scale(1.01);
-  -ms-transform: scale(1.01);
-  transform: scale(1.01);
+      -ms-transform: scale(1.01);
+          transform: scale(1.01);
 }
 
 .work__overlay {
@@ -704,8 +675,8 @@ h6 {
   width: 100%;
   background-color: rgba(1, 255, 255, 0.08);
   -webkit-transform: translateX(-100%);
-  -ms-transform: translateX(-100%);
-  transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
   -webkit-transition: -webkit-transform 0.5s ease;
   transition: -webkit-transform 0.5s ease;
   -o-transition: transform 0.5s ease;
@@ -716,8 +687,8 @@ h6 {
 
 .work:hover .work__overlay-movement {
   -webkit-transform: translateX(0);
-  -ms-transform: translateX(0);
-  transform: translateX(0);
+      -ms-transform: translateX(0);
+          transform: translateX(0);
 }
 
 .overlay {
@@ -728,11 +699,11 @@ h6 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: end;
-  -ms-flex-pack: end;
-  justify-content: flex-end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   padding: 1.25rem;
   background-color: rgba(43, 44, 53, 0.7);
 }
@@ -744,8 +715,8 @@ h6 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 0.9375rem;
 }
 
@@ -821,11 +792,11 @@ h6 {
   font-size: 1.25rem;
   color: #2b2c35;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -845,51 +816,9 @@ h6 {
 
 /* **************************** */
 
-/*      Back To Top Button      */
+/*      11. Testimonial         */
 
 /* **************************** */
-
-.back-to-top-button {
-  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px,
-    rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px,
-    rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
-  position: fixed;
-  z-index: 99;
-  bottom: 20px;
-  right: 20px;
-  width: 52px;
-  height: 52px;
-  border: none;
-  border-radius: 50%;
-  outline: none;
-  background-color: #363742;
-  cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
-  -webkit-transition: opacity 0.3s ease-in-out;
-  -o-transition: opacity 0.3s ease-in-out;
-  transition: opacity 0.3s ease-in-out;
-}
-
-.back-to-top-button:hover {
-  background-color: #363742;
-}
-
-.back-to-top-button__show {
-  visibility: visible;
-  opacity: 1;
-}
-
-.back-to-top-button__icon {
-  color: #fff;
-}
-
-/* ******************** */
-
-/*     Testimonial      */
-
-/* ******************** */
 
 .swiper {
   width: 100%;
@@ -906,8 +835,8 @@ h6 {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-  -ms-flex-direction: column;
-  flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   gap: 1.25rem;
   /* Center slide text vertically */
   display: -webkit-box;
@@ -944,11 +873,11 @@ h6 {
   background-color: #01ffff;
 }
 
-/* **************** */
+/* **************************** */
 
-/*     Contact      */
+/*     12. Contact              */
 
-/* **************** */
+/* **************************** */
 
 .contact {
   position: relative;
@@ -959,8 +888,8 @@ h6 {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  transform: translate(-50%, -50%);
+      -ms-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   height: 95%;
   z-index: -1;
   margin-left: auto;
@@ -976,8 +905,8 @@ h6 {
   visibility: hidden;
   opacity: 0;
   -webkit-transform: translateY(20px);
-  -ms-transform: translateY(20px);
-  transform: translateY(20px);
+      -ms-transform: translateY(20px);
+          transform: translateY(20px);
   -webkit-transition: 0.3s ease-out;
   -o-transition: 0.3s ease-out;
   transition: 0.3s ease-out;
@@ -985,8 +914,8 @@ h6 {
 
 .contact__alert.show-alert {
   -webkit-transform: translateY(0);
-  -ms-transform: translateY(0);
-  transform: translateY(0);
+      -ms-transform: translateY(0);
+          transform: translateY(0);
   visibility: visible;
   opacity: 1;
 }
@@ -1030,17 +959,68 @@ h6 {
   background-color: rgba(1, 255, 255, 0.05);
 }
 
-/* ******************** */
+.was-validated .form-control:invalid {
+  border-color: #ea5252;
+  border-width: 0.125rem;
+}
 
-/*    Custom Cursor     */
+.was-validated .form-control:valid,
+.was-validated .form-control:valid:focus {
+  border-color: #01ffff;
+  border-width: 0.125rem;
+}
 
-/* ******************** */
+/* **************************** */
 
-/* ******************** */
+/*     13. Back To Top Button   */
 
-/*        Scrollbar     */
+/* **************************** */
 
-/* ******************** */
+.back-to-top-button {
+  -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
+          box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 5px -1px, rgba(0, 0, 0, 0.14) 0px 6px 10px 0px, rgba(0, 0, 0, 0.12) 0px 1px 18px 0px;
+  position: fixed;
+  z-index: 99;
+  bottom: 20px;
+  right: 20px;
+  width: 52px;
+  height: 52px;
+  border: none;
+  border-radius: 50%;
+  outline: none;
+  background-color: #363742;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: opacity 0.3s ease-in-out;
+  -o-transition: opacity 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.back-to-top-button:hover {
+  background-color: #363742;
+}
+
+.back-to-top-button__show {
+  visibility: visible;
+  opacity: 1;
+}
+
+.back-to-top-button__icon {
+  color: #fff;
+}
+
+/* **************************** */
+
+/*     14. Custom Cursor        */
+
+/* **************************** */
+
+/* **************************** */
+
+/*     15. Scrollbar            */
+
+/* **************************** */
 
 /* width */
 
@@ -1080,11 +1060,11 @@ h6 {
   background: #363742;
 }
 
-/* ******************** */
+/* **************************** */
 
-/*        Glitch        */
+/*     16. Glitch Section Title */
 
-/* ******************** */
+/* **************************** */
 
 .glitch-1 {
   position: relative;
@@ -1108,39 +1088,17 @@ h6 {
   left: -2px;
 }
 
-.glitch-2 {
-  position: relative;
-}
-
-.glitch-2:before,
-.glitch-2:after {
-  content: attr(data-glitch);
-  position: absolute;
-}
-
-.glitch-2:after {
-  color: #01ffff;
-  z-index: -1;
-  left: 3px;
-}
-
-.glitch-2:before {
-  color: #ff00fe;
-  z-index: -2;
-  left: -3px;
-}
-
 .section-title-glitch {
   position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   margin-bottom: 1.5625rem;
 }
 
@@ -1154,9 +1112,9 @@ h6 {
   font-size: 3.125rem;
   color: #55565d;
   -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 @media (min-width: 992px) {
@@ -1178,12 +1136,9 @@ h6 {
     width: 0.375rem;
     height: 0.375rem;
     background-color: #01ffff;
-    -webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
-      margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    -o-transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
-      margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
-    transition: width 0.3s ease-in-out, height 0.3s ease-in-out,
-      margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    -webkit-transition: width 0.3s ease-in-out, height 0.3s ease-in-out, margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    -o-transition: width 0.3s ease-in-out, height 0.3s ease-in-out, margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
+    transition: width 0.3s ease-in-out, height 0.3s ease-in-out, margin 0.3s ease-in-out, opacity 0.3s ease-in-out;
   }
 
   .cursor-outer {
@@ -1287,8 +1242,8 @@ h6 {
 
   .left-hero__icons-list {
     -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
   }
 
   .right-hero {
@@ -1301,8 +1256,8 @@ h6 {
 
   .right-hero {
     -webkit-transform: scale(0.7);
-    -ms-transform: scale(0.7);
-    transform: scale(0.7);
+        -ms-transform: scale(0.7);
+            transform: scale(0.7);
   }
 
   .skills__list {
@@ -1319,8 +1274,8 @@ h6 {
 
   .skill {
     -webkit-transform: scale(0.9);
-    -ms-transform: scale(0.9);
-    transform: scale(0.9);
+        -ms-transform: scale(0.9);
+            transform: scale(0.9);
     height: 6.1875rem;
     width: 6.1875rem;
   }
@@ -1343,35 +1298,35 @@ h6 {
   .experience__tabs-list {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
-    -ms-flex-direction: row;
-    flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
     -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
+        flex-wrap: wrap;
     -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
   }
 
   .contact__alert {
     white-space: nowrap;
     left: 50%;
     -webkit-transform: translateX(-50%) translateY(20px);
-    -ms-transform: translateX(-50%) translateY(20px);
-    transform: translateX(-50%) translateY(20px);
+        -ms-transform: translateX(-50%) translateY(20px);
+            transform: translateX(-50%) translateY(20px);
   }
 
   .contact__alert.show-alert {
     -webkit-transform: translateX(-50%) translateY(0);
-    -ms-transform: translateX(-50%) translateY(0);
-    transform: translateX(-50%) translateY(0);
+        -ms-transform: translateX(-50%) translateY(0);
+            transform: translateX(-50%) translateY(0);
   }
 }
 
 @media (max-width: 600px) {
   .work__number-container {
     -webkit-transform: translate(15%, -30%);
-    -ms-transform: translate(15%, -30%);
-    transform: translate(15%, -30%);
+        -ms-transform: translate(15%, -30%);
+            transform: translate(15%, -30%);
   }
 }
 
@@ -1382,8 +1337,8 @@ h6 {
 
   .skill {
     -webkit-transform: scale(0.8);
-    -ms-transform: scale(0.8);
-    transform: scale(0.8);
+        -ms-transform: scale(0.8);
+            transform: scale(0.8);
     height: 5rem;
     width: 5rem;
   }

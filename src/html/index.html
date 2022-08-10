@@ -1,8 +1,32 @@
+<!-- 
+=========== 
+HTML INDEX
+  1. Head
+  2. Header Content
+    2.1 Navigation
+  3. Main Content
+    3.1 Hero Section
+    3.2 About Section
+    3.3 Skills Section
+    3.4 Services Section
+    3.5 Experience Section
+    3.6 Portfolio Section
+    3.7 Testimonial Section
+    3.8 Contact Section
+  4. Footer
+  5. Back To Top Button
+  6. Custom Cursor
+  7. Scripts
+
+
+===========
+-->
+
 <!DOCTYPE html>
 <html lang="en">
-  <!-- ********** -->
-  <!--    Head    -->
-  <!-- ********** -->
+  <!-- *********************** -->
+  <!--    1. Head              -->
+  <!-- *********************** -->
   @@include('components/head.html', {})
   <body
     data-bs-spy="scroll"
@@ -10,99 +34,93 @@
     data-bs-root-margin="0px 0px -80%"
     tabindex="0"
   >
-    <!-- ************** -->
-    <!-- Header Content -->
-    <!-- ************** -->
+    <!-- *********************** -->
+    <!-- 2. Header Content       -->
+    <!-- *********************** -->
     <header>
-      <!-- ********** -->
-      <!-- Navigation -->
-      <!-- ********** -->
+      <!-- *********************** -->
+      <!-- 2.1 Navigation          -->
+      <!-- *********************** -->
       @@include('components/navigation-main.html', {})
       <!-- end of Navigation -->
     </header>
     <!-- end of Header Content -->
 
-    <!-- ************ -->
-    <!-- Main Content -->
-    <!-- ************ -->
+    <!-- *********************** -->
+    <!-- 3. Main Content         -->
+    <!-- *********************** -->
     <main>
-      <!-- ************* -->
-      <!--  Hero Section -->
-      <!-- ************* -->
+      <!-- *********************** -->
+      <!--  3.1 Hero Section       -->
+      <!-- *********************** -->
       @@include('components/hero.html', {})
       <!-- end of Hero Section -->
 
-      <!-- ************* -->
-      <!--  About Section -->
-      <!-- ************* -->
+      <!-- *********************** -->
+      <!--  3.2 About Section      -->
+      <!-- *********************** -->
       @@include('components/about.html',{})
       <!-- end of About Section -->
 
-      <!-- *************** -->
-      <!--  Skills Section -->
-      <!-- *************** -->
+      <!-- *********************** -->
+      <!--  3.3 Skills Section     -->
+      <!-- *********************** -->
       @@include('components/skills.html',{})
       <!-- end of Skills Section -->
 
-      <!-- *************** -->
-      <!--  Services Section -->
-      <!-- *************** -->
+      <!-- *********************** -->
+      <!--  3.4 Services Section   -->
+      <!-- *********************** -->
       @@include('components/services.html',{})
       <!-- end of Services Section -->
 
-      <!-- *************** -->
-      <!--  Experience Section -->
-      <!-- *************** -->
+      <!-- *********************** -->
+      <!--  3.5 Experience Section -->
+      <!-- *********************** -->
       @@include('components/experience.html',{})
       <!-- end of Experience Section -->
 
-      <!-- *************** -->
-      <!--  Portfolio Section -->
-      <!-- *************** -->
+      <!-- *********************** -->
+      <!--  3.6 Portfolio Section  -->
+      <!-- *********************** -->
       @@include('components/portfolio.html',{})
       <!-- end of Portfolio Section -->
 
-      <!-- ******************* -->
-      <!-- Testimonial Section -->
-      <!-- ******************* -->
+      <!-- *********************** -->
+      <!-- 3.7 Testimonial Section -->
+      <!-- *********************** -->
       @@include('components/testimonial.html', {})
       <!-- end of Testimonial Section -->
 
-      <!-- ******************* -->
-      <!-- Contact Section -->
-      <!-- ******************* -->
+      <!-- *********************** -->
+      <!-- 3.8 Contact Section     -->
+      <!-- *********************** -->
       @@include('components/contact.html', {})
       <!-- end of Contact Section -->
     </main>
     <!-- end of Main Content -->
 
-    <!-- ****** -->
-    <!-- Footer -->
-    <!-- ****** -->
+    <!-- *********************** -->
+    <!-- 4. Footer               -->
+    <!-- *********************** -->
     <footer>@@include('components/footer.html', {})</footer>
     <!-- end of Footer -->
 
-    <!-- ****************** -->
-    <!-- Back To Top Button -->
-    <!-- ****************** -->
+    <!-- *********************** -->
+    <!-- 5. Back To Top Button   -->
+    <!-- *********************** -->
     @@include('components/back-to-top-button.html', {})
     <!-- end of Back To Top Button -->
 
-    <!-- ****************** -->
-    <!--    Custom Cursor   -->
-    <!-- ****************** -->
+    <!-- *********************** -->
+    <!--  6. Custom Cursor       -->
+    <!-- *********************** -->
     @@include('components/custom-cursor.html', {})
     <!-- end of Custom Cursor -->
 
-    <!-- ************** -->
-    <!--    Preloader   -->
-    <!-- ************** -->
-    @@include('components/preloader.html', {})
-    <!-- end of Custom Cursor -->
-
-    <!-- ****************** -->
-    <!--       Scripts      -->
-    <!-- ****************** -->
+    <!-- *********************** -->
+    <!--   7. Scripts            -->
+    <!-- *********************** -->
     @@include('components/scripts.html', {})
     <!-- end of Scripts -->
   </body>

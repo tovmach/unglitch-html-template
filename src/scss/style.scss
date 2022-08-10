@@ -2,7 +2,6 @@
 
 /*
     Template Name: unglitch - Responsive Bootstrap 5 One Page Portfolio Template
-    Template URI: *****
     Description: Responsive Bootstrap 5 One Page Portfolio Template
     Author: Michael Tovmach
     Author URI: https://www.tovmach.com/
@@ -12,20 +11,28 @@
 /*=================================
    CSS INDEX
 ===================================
-    1. Default CSS
-    2. Header CSS
-    3. Hero CSS
-    4. About CSS
-    5. Portfolio CSS
-    6. Blog CSS
-    7. Contact CSS
-    8. Footer CSS
+    1. Function 
+    2. Variables  
+    3. General Styles 
+    4. Navigation
+    5. Hero 
+    6. About 
+    7. Skills
+    8. Services
+    9. Experience 
+    10. Porfolio
+    11. Testimonial
+    12. Contact 
+    13. Back To Top Button
+    14. Custom Cursor
+    15. Scrollbar
+    16. Glitch Section Title
 
  =================================*/
 
-/* ************************ */
-/*         Function         */
-/* ************************ */
+/* **************************** */
+/*      1. Function             */
+/* **************************** */
 @use 'sass:math';
 
 //REM
@@ -34,9 +41,9 @@
   @return $result;
 }
 
-/* ************************ */
-/*        Variables         */
-/* ************************ */
+/* **************************** */
+/*      2. Variables            */
+/* **************************** */
 
 // colors
 $text-color: #fff;
@@ -51,15 +58,16 @@ $sm-575px: 575px;
 $md-767px: 767px;
 $lg-991px: 991px;
 
-/* ************************ */
-/*      General Styles      */
-/* ************************ */
+/* **************************** */
+/*      3. General Styles       */
+/* **************************** */
 
 // fonts
 @font-face {
   font-family: Invasible;
   src: url('../fonts/invasible-invasible-regular-400.ttf') format('opentype');
 }
+
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 // tags
@@ -109,125 +117,68 @@ h6 {
     max-width: rem(1200);
   }
 }
-/* **************** */
-/*    Preloader     */
-/* **************** */
-@import 'components/preloader';
 
 /* **************************** */
-/*          Navigation          */
+/*      4. Navigation           */
 /* **************************** */
 @import 'components/navigation-main';
 
 /* **************************** */
-/*             Hero             */
+/*      5. Hero                 */
 /* **************************** */
 @import 'components/hero';
 
 /* **************************** */
-/*              About           */
+/*      6. About                */
 /* **************************** */
 @import 'components/about';
 
 /* **************************** */
-/*              Skills           */
+/*      7. Skills               */
 /* **************************** */
 @import 'components/skills';
 
 /* **************************** */
-/*              Experience           */
+/*      8. Services             */
+/* **************************** */
+@import 'components/services';
+
+/* **************************** */
+/*      9. Experience           */
 /* **************************** */
 @import 'components/experience';
 
 /* **************************** */
-/*            Services          */
-/* **************************** */
-@import 'components/services';
-/* **************************** */
-/*            porfolio          */
+/*      10. Porfolio            */
 /* **************************** */
 @import 'components/portfolio';
 
 /* **************************** */
-/*      Back To Top Button      */
+/*      11. Testimonial         */
+/* **************************** */
+@import 'components/testimonial';
+
+/* **************************** */
+/*     12. Contact              */
+/* **************************** */
+@import 'components/contact';
+
+/* **************************** */
+/*     13. Back To Top Button   */
 /* **************************** */
 @import 'components/back-to-top-button';
 
-/* ******************** */
-/*     Testimonial      */
-/* ******************** */
-@import 'components/testimonial';
-
-/* **************** */
-/*     Contact      */
-/* **************** */
-@import 'components/contact';
-
-/* ******************** */
-/*    Custom Cursor     */
-/* ******************** */
+/* **************************** */
+/*     14. Custom Cursor        */
+/* **************************** */
 @import 'components/custom-cursor';
 
-/* ******************** */
-/*        Scrollbar     */
-/* ******************** */
+/* **************************** */
+/*     15. Scrollbar            */
+/* **************************** */
 @import 'components/scrollbar';
 
-/* ******************** */
-/*        Glitch        */
-/* ******************** */
-
-.glitch-1 {
-  position: relative;
-  &:before,
-  &:after {
-    content: attr(data-glitch);
-    position: absolute;
-  }
-  &:after {
-    color: #01ffff;
-    z-index: -1;
-    left: 2px;
-  }
-  &:before {
-    color: #ff00fe;
-    z-index: -2;
-    left: -2px;
-  }
-}
-.glitch-2 {
-  position: relative;
-  &:before,
-  &:after {
-    content: attr(data-glitch);
-    position: absolute;
-  }
-  &:after {
-    color: #01ffff;
-    z-index: -1;
-    left: 3px;
-  }
-  &:before {
-    color: #ff00fe;
-    z-index: -2;
-    left: -3px;
-  }
-}
-
-.section-title-glitch {
-  position: relative;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: rem(25);
-  &__title {
-    font-size: rem(40);
-  }
-  &__text {
-    z-index: -10;
-    position: absolute;
-    font-size: rem(50);
-    color: $text-gray;
-    user-select: none;
-  }
-}
+/* **************************** */
+/*     16. Glitch Section Title */
+/* **************************** */
+@import 'components/section-title';

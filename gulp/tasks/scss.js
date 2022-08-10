@@ -17,13 +17,13 @@ export const scss = () => {
         app.plugins.plumber(
           app.plugins.notify.onError({
             title: 'SCSS',
-            message: 'Error: <%= error.message %>',
+            message: 'Error: <%= error.message %>'
           })
         )
       )
       .pipe(
         sass({
-          outputStyle: 'expanded',
+          outputStyle: 'expanded'
         })
       )
       .pipe(groupCssMediaQueries())
@@ -31,7 +31,7 @@ export const scss = () => {
         autoprefixer({
           grid: true,
           overrideBrowserslist: ['last 3 versions'],
-          cascade: true,
+          cascade: true
         })
       )
       // .pipe(
@@ -41,12 +41,12 @@ export const scss = () => {
       //   })
       // )
       .pipe(app.plugins.replace(/@img\//g, '../img/'))
-      .pipe(prettier())
+      //.pipe(prettier())
       .pipe(app.gulp.dest(app.path.build.css))
       .pipe(cleanCss())
       .pipe(
         rename({
-          extname: '.min.css',
+          extname: '.min.css'
         })
       )
       .pipe(app.gulp.dest(app.path.build.css))

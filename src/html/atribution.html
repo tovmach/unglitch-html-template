@@ -1,21 +1,41 @@
+<!-- 
+=========== 
+HTML INDEX
+  1. Head
+  2. Header Content
+    2.1 Navigation
+  3. Main Content
+  4. Footer
+  5. Back To Top Button
+  6. Custom Cursor
+  7. Scripts
+
+
+===========
+-->
+
 <!DOCTYPE html>
 <html lang="en">
-  <!-- ********** -->
-  <!--    Head    -->
-  <!-- ********** -->
+  <!-- *********************** -->
+  <!--    1. Head              -->
+  <!-- *********************** -->
   @@include('components/head.html', {})
   <body>
-    <!-- ************** -->
-    <!-- Header Content -->
-    <!-- ************** -->
+    <!-- *********************** -->
+    <!-- 2. Header Content       -->
+    <!-- *********************** -->
     <header>
-      <!-- ********** -->
-      <!-- Navigation -->
-      <!-- ********** -->
+      <!-- *********************** -->
+      <!-- 2.1 Navigation          -->
+      <!-- *********************** -->
       @@include('components/navigation-main.html', {})
       <!-- end of Navigation -->
     </header>
     <!-- end of Header Content -->
+
+    <!-- *********************** -->
+    <!-- 3. Main Content         -->
+    <!-- *********************** -->
     <main>
       <div class="container">
         <h1 class="text-center">Atribution</h1>
@@ -108,26 +128,29 @@
         </ul>
       </div>
     </main>
-    <!-- ****** -->
-    <!-- Footer -->
-    <!-- ****** -->
+    <!-- end of Main Content -->
+
+    <!-- *********************** -->
+    <!-- 4. Footer               -->
+    <!-- *********************** -->
     <footer>@@include('components/footer.html', {})</footer>
     <!-- end of Footer -->
 
-    <!-- ****************** -->
-    <!-- Back To Top Button -->
-    <!-- ****************** -->
+    <!-- *********************** -->
+    <!-- 5. Back To Top Button   -->
+    <!-- *********************** -->
     @@include('components/back-to-top-button.html', {})
     <!-- end of Back To Top Button -->
 
-    <!-- ****************** -->
-    <!--    Custom Cursor   -->
-    <!-- ****************** -->
+    <!-- *********************** -->
+    <!--  6. Custom Cursor       -->
+    <!-- *********************** -->
     @@include('components/custom-cursor.html', {})
     <!-- end of Custom Cursor -->
-    <!-- ****************** -->
-    <!--       Scripts      -->
-    <!-- ****************** -->
+
+    <!-- *********************** -->
+    <!--   7. Scripts            -->
+    <!-- *********************** -->
     @@include('components/scripts.html', {})
     <!-- end of Scripts -->
   </body>
