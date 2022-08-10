@@ -44,11 +44,17 @@
 
 /* **************************** */
 
+/* colors */
+
+/* breakpoints */
+
 /* **************************** */
 
 /*      3. General Styles       */
 
 /* **************************** */
+
+/* fonts */
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;
 
@@ -57,6 +63,8 @@
   font-family: Invasible;
   src: url("../fonts/invasible-invasible-regular-400.ttf") format("opentype");
 }
+
+/* tags */
 
 html {
   /* Offset scroll anchor for fixed navbar */
@@ -750,6 +758,8 @@ h6 {
   margin-left: 0.625rem;
 }
 
+/* Modal */
+
 .modal-content {
   background-color: #2b2c35;
 }
@@ -814,11 +824,21 @@ h6 {
   background-color: #01ffff;
 }
 
+.modal-footer {
+  border-top-color: #363742;
+}
+
+.modal-header {
+  border-bottom-color: #363742;
+}
+
 /* **************************** */
 
 /*      11. Testimonial         */
 
 /* **************************** */
+
+/* swiper */
 
 .swiper {
   width: 100%;
@@ -1046,6 +1066,8 @@ h6 {
 ::-webkit-scrollbar-thumb:hover {
   background: #01ffff;
 }
+
+/* horizontal scrollbar *used in skills section */
 
 ::-webkit-scrollbar:horizontal {
   height: 0.125rem;

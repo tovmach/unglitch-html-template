@@ -45,7 +45,7 @@
 /*      2. Variables            */
 /* **************************** */
 
-// colors
+/* colors */
 $text-color: #fff;
 $text-gray: #55565d;
 $main-bg-color: #2b2c35;
@@ -53,7 +53,7 @@ $main-bg-color-light: #363742;
 $main-color: #01ffff;
 $secondary-color: #ff00fe;
 
-// breakpoints
+/* breakpoints */
 $sm-575px: 575px;
 $md-767px: 767px;
 $lg-991px: 991px;
@@ -62,7 +62,7 @@ $lg-991px: 991px;
 /*      3. General Styles       */
 /* **************************** */
 
-// fonts
+/* fonts */
 @font-face {
   font-family: Invasible;
   src: url('../fonts/invasible-invasible-regular-400.ttf') format('opentype');
@@ -70,7 +70,7 @@ $lg-991px: 991px;
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-// tags
+/* tags */
 html {
   /* Offset scroll anchor for fixed navbar */
   scroll-padding-top: rem(56);

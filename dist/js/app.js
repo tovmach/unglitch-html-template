@@ -267,7 +267,7 @@ const unglitch_form = () => {
 /*           9. Glitch           */
 /*********************************/
 // Glitch Section Name Text
-// adds the textContent to the dataset so it can be use later in css
+// add the textContent to the dataset so it can be use later in css
 const unglitch_glitch = () => {
   const glitchList = document.querySelectorAll('.glitch-1')
   if (glitchList) {

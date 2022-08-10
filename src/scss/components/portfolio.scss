@@ -113,7 +113,7 @@
   }
 }
 
-// Modal
+/* Modal */
 .modal-content {
   background-color: $main-bg-color;
 }
@@ -163,4 +163,11 @@
       background-color: $main-color;
     }
   }
+}
+
+.modal-footer {
+  border-top-color: $main-bg-color-light;
+}
+.modal-header {
+  border-bottom-color: $main-bg-color-light;
 }
