@@ -4,21 +4,21 @@
   min-height: rem(250);
   margin-left: auto;
   margin-right: auto;
-  @media (max-width: 575px) {
+  @media (max-width: $sm-575px) {
     min-height: rem(320);
   }
-  @media (max-width: 991px) {
+  @media (max-width: $lg-991px) {
     min-height: rem(280);
   }
 }
 
-@media (max-width: 991px) {
+@media (max-width: $lg-991px) {
   .swiper-button-next,
   .swiper-button-prev {
     display: none;
   }
 }
-@media (max-width: 575px) {
+@media (max-width: $sm-575px) {
   .swiper-pagination.swiper-pagination-clickable.swiper-pagination-bullets.swiper-pagination-horizontal {
     bottom: 0px;
   }

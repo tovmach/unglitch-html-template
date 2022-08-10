@@ -25,7 +25,7 @@
 }
 ::-webkit-scrollbar-thumb:horizontal {
   background: $main-color;
-  border-radius: 2px;
+  border-radius: rem(2);
 }
 ::-webkit-scrollbar-track:horizontal {
   background: $main-bg-color-light;

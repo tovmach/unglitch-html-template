@@ -1,7 +1,7 @@
 /* Scrollspy */
 .nav-link.active {
   background-color: $main-bg-color-light;
-  border-radius: 5px;
+  border-radius: rem(5);
 }
 /* Main Nav */
 .navbar {
@@ -36,15 +36,15 @@
 }
 
 /* offcanvas mobile menu */
-@media (max-width: 991px) {
+@media (max-width: $lg-991px) {
   .offcanvas {
-    width: 250px !important;
+    width: rem(250) !important;
     background-color: $main-bg-color;
     color: $text-color;
     &__li {
-      border-bottom: 1px solid rgba(177, 177, 177, 0.18);
+      border-bottom: rem(1) solid rgba(177, 177, 177, 0.18);
       &:first-child {
-        border-top: 1px solid rgba(177, 177, 177, 0.18);
+        border-top: rem(1) solid rgba(177, 177, 177, 0.18);
       }
       &:hover {
         background-color: $main-bg-color-light;

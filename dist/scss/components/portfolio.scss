@@ -9,7 +9,7 @@
     top: 0;
     right: 0;
     transform: translate(24%, -30%);
-    @media (max-width: 600px) {
+    @media (max-width: $sm-575px) {
       transform: translate(15%, -30%);
     }
   }

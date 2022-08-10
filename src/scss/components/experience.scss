@@ -4,11 +4,10 @@
     flex-direction: column;
     align-items: center;
     list-style-type: none; /* Remove bullets */
-    //gap: rem(10);
     padding: rem(20);
     padding: 0;
     margin: 0;
-    @media (max-width: 767px) {
+    @media (max-width: $md-767px) {
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: center;

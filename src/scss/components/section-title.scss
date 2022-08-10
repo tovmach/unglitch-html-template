@@ -8,12 +8,12 @@
   &:after {
     color: #01ffff;
     z-index: -1;
-    left: 2px;
+    left: rem(2);
   }
   &:before {
     color: #ff00fe;
     z-index: -2;
-    left: -2px;
+    left: rem(-2);
   }
 }
 
