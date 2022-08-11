@@ -62,13 +62,11 @@ $lg-991px: 991px;
 /*      3. General Styles       */
 /* **************************** */
 
-/* fonts */
+/* fonts "google fonts are imported in the html head" */
 @font-face {
   font-family: Invasible;
   src: url('../fonts/invasible-invasible-regular-400.ttf') format('opentype');
 }
-
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
 /* tags */
 html {

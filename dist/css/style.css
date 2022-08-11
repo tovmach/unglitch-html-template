@@ -54,11 +54,8 @@
 
 /* **************************** */
 
-/* fonts */
+/* fonts "google fonts are imported in the html head" */
 
-@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;
-
-700&display=swap");
 @font-face {
   font-family: Invasible;
   src: url("../fonts/invasible-invasible-regular-400.ttf") format("opentype");
@@ -1350,9 +1347,9 @@ h6 {
   }
 
   .skill {
-    -webkit-transform: scale(0.8);
-        -ms-transform: scale(0.8);
-            transform: scale(0.8);
+    -webkit-transform: scale(0.78);
+        -ms-transform: scale(0.78);
+            transform: scale(0.78);
     height: 5rem;
     width: 5rem;
   }
